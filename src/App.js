@@ -1,169 +1,75 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { debounce } from "lodash";
-import * as gosling from 'gosling.js';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import * as d3 from "d3";
+import BarChart from "./components/BarChart";
+import GenomePlots from "./components/GenomePlots";
+import { getDimensions } from "./utils/getDimensions";
+import "./App.css";
 
-const goslingSpec = (domain, mark, binSize, height, hoveredSample) => { 
-  return {
-    "layout": "linear",
-    "arrangement": "vertical",
-    "centerRadius": 0.8,
-    "xDomain": {"chromosome": "1", "interval": [1, 3000500]},
-    "views": [
-      {
-        "tracks": [
-          {
-            "id": "track-1",
-            "data": {
-              "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-              "type": "multivec",
-              "row": "sample",
-              "column": "position",
-              "value": "peak",
-              "categories": ["sample 1", "sample 2", "sample 3", "sample 4"],
-              binSize: binSize === 0 ? 1 : binSize
-            },
-            "mark": mark,
-            "x": {"field": "start", "type": "genomic", "axis": "top"},
-            "xe": {"field": "end", "type": "genomic"},
-            "row": {"field": "sample", "type": "nominal", "legend": true},
-            "color": {"field": "peak", "type": "quantitative", "legend": true, domain},
-            "tooltip": [
-              {"field": "start", "type": "genomic", "alt": "Start Position"},
-              {"field": "end", "type": "genomic", "alt": "End Position"},
-              {
-                "field": "peak",
-                "type": "quantitative",
-                "alt": "Value",
-                "format": ".2"
-              },
-              {"field": "sample", "type": "nominal", "alt": "Sample"}
-            ],
-            "width": 600,
-            height
-          },
-          {
-            alignment: "overlay",
-            "data": {
-              "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-              "type": "multivec",
-              "row": "sample",
-              "column": "position",
-              "value": "peak",
-              "categories": ["sample 1", "sample 2", "sample 3", "sample 4"],
-              binSize: binSize === 0 ? 1 : binSize
-            },
-            "mark": 'point',
-            "x": {"field": "position", "type": "genomic", "axis": "top"},
-            "y": {"field": "peak", "type": "quantitative" },
-            opacity: { value: 0.6 },
-            // "row": {"field": "sample", "type": "nominal", "legend": true},
-            tracks: [
-              { 
-                "id": "track-2",
-                "color": { "value": "lightgray" } 
-              },
-              { 
-                "id": "track-3",
-                dataTransform: [
-                  { type: 'filter', field: 'sample', oneOf: [hoveredSample] }
-                ],
-                "color": { "value": "steelblue" } 
-              },
-            ],
-            "width": 600,
-            height
-          }
-        ]
-      },
-    ]
-  }
-};
+// dimensions:
+// main container = 90% width
+// circos / linear track = 60% width of main
+// bar charts / hover details = 40% width of main
+// see App.css
 
 function App() {
-  const gosRef = useRef(null);
+  const [data, setData] = useState([]);
+  const [circosWidth, setCircosWidth] = useState(getDimensions(0.6));
+  const [barChartDims, setBarChartDims] = useState({
+    wrapperWidth: getDimensions(0.4),
+    wrapperHeight: getDimensions(0.4 * 0.6), // height of bar chart is 0.6 of width
+  });
 
-  const [min, setMin] = useState(0);
-  const [height, setHeight] = useState(130);
-  const [mark, setMark] = useState('rect');
-  const [binSize, setBinSize] = useState(0);
-  const [hoveredSample, setHoveredSample] = useState();
-
+  // fetch data
   useEffect(() => {
-    if (!gosRef.current) return;
+    const fetchData = async () => {
+      const d = await d3.tsv("/data/test.tsv");
+      setData(d);
+    };
+    fetchData();
+  }, []);
 
-    gosRef.current.api.subscribe(
-      "mouseover",
-      debounce((type, e) => {
-        setHoveredSample(e.data.sample);
-      }, 50)
-    );
+  // listen for resize events
+  useEffect(() => {
+    const handleResize = () => {
+      setCircosWidth(
+        0.54 * window.innerWidth > 756 ? 756 : 0.54 * window.innerWidth
+      );
+      setBarChartDims({
+        wrapperWidth:
+          0.36 * window.innerWidth > 540 ? 540 : 0.36 * window.innerWidth,
+        wrapperHeight:
+          0.2 * window.innerWidth > 224 ? 224 : 0.2 * window.innerWidth,
+      });
+    };
 
-    return () => gosRef.current.api.unsubscribe("mouseover");
-  }, [gosRef]);
+    window.addEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
-      <span>
-        <div style={{marginTop: 30, marginLeft: 80}}>
-          {'Bin Size: '}
-          <input 
-            type="range" 
-            min={0}
-            max={32}
-            step={4} 
-            value={binSize}
-            className="slider" 
-            id="bin-slider" 
-            style={{ width: 100, display: 'inline', margin: 10}}
-            onChange={(e) => setBinSize(+e.currentTarget.value) }
-          />
-          {binSize === 0 ? 1 : binSize}
+      <h1>ClinVar Structural Variants</h1>
+
+      <main className="dashboard">
+        <GenomePlots width={circosWidth} />
+        <div className="side">
+          <p>
+            Will contain summary bar charts for ClinVar dataset and user dataset
+          </p>
+          {data && data.length > 0 && (
+            <BarChart
+              data={data}
+              title="ClinVar Variants"
+              wrapperWidth={barChartDims.wrapperWidth}
+              wrapperHeight={barChartDims.wrapperHeight}
+            />
+          )}
+          <p>
+            <br />
+            <br />
+            Container for showing individual variant info on hover
+          </p>
         </div>
-        <div style={{marginLeft: 80}}>
-          {'Color Min Value: '}
-          <input 
-            type="range" 
-            min={0}
-            max={0.001}
-            step={0.0001} 
-            value={min}
-            className="slider" 
-            id="min-slider" 
-            style={{ width: 100, display: 'inline', margin: 10}}
-            onChange={(e) => setMin(e.currentTarget.value) }
-          />
-          {min}
-        </div>
-        {/* <div style={{marginLeft: 80}}>
-          Height:
-          <input 
-            type="range" 
-            min={130}
-            max={300}
-            step={10} 
-            value={height}
-            className="slider" 
-            id="height-slider" 
-            style={{ width: 100, display: 'inline', margin: 10}}
-            onChange={(e) => setHeight(e.currentTarget.value) }
-          />
-          {height}
-        </div> */}
-      </span>
-      <div style={{marginTop: 30, marginLeft: 80}}>
-        {'Mark: '}
-        <select name="mark" onChange={(e) => setMark(e.currentTarget.value)}>
-          <option value="rect">rect</option>
-          <option value="point">point</option>
-        </select>
-      </div>
-      
-      <gosling.GoslingComponent
-        ref={gosRef}
-        spec={goslingSpec([+min, 0.001], mark, binSize, height, hoveredSample)}
-        experimental={{ reactive: true }}
-      />
+      </main>
     </>
   );
 }
