@@ -1,0 +1,101 @@
+Chromosome	ClinicalSignificance	size
+1	Benign	3326
+1	Likely benign	1159
+1	Likely pathogenic	1068
+1	Pathogenic	3232
+10	Benign	1915
+10	Likely benign	640
+10	Likely pathogenic	384
+10	Pathogenic	1394
+11	Benign	1788
+11	Likely benign	907
+11	Likely pathogenic	763
+11	Pathogenic	2940
+12	Benign	1893
+12	Likely benign	762
+12	Likely pathogenic	533
+12	Pathogenic	1657
+13	Benign	1085
+13	Likely benign	405
+13	Likely pathogenic	430
+13	Pathogenic	3842
+14	Benign	1284
+14	Likely benign	466
+14	Likely pathogenic	311
+14	Pathogenic	982
+15	Benign	1550
+15	Likely benign	623
+15	Likely pathogenic	647
+15	Pathogenic	2151
+16	Benign	1568
+16	Likely benign	686
+16	Likely pathogenic	794
+16	Pathogenic	3445
+17	Benign	1873
+17	Likely benign	761
+17	Likely pathogenic	1009
+17	Pathogenic	6622
+18	Benign	916
+18	Likely benign	384
+18	Likely pathogenic	224
+18	Pathogenic	872
+19	Benign	1680
+19	Likely benign	611
+19	Likely pathogenic	525
+19	Pathogenic	1923
+2	Benign	3014
+2	Likely benign	1380
+2	Likely pathogenic	1806
+2	Pathogenic	5002
+20	Benign	827
+20	Likely benign	288
+20	Likely pathogenic	182
+20	Pathogenic	758
+21	Benign	590
+21	Likely benign	186
+21	Likely pathogenic	136
+21	Pathogenic	510
+22	Benign	898
+22	Likely benign	297
+22	Likely pathogenic	334
+22	Pathogenic	1522
+3	Benign	2206
+3	Likely benign	832
+3	Likely pathogenic	606
+3	Pathogenic	2587
+4	Benign	2110
+4	Likely benign	634
+4	Likely pathogenic	386
+4	Pathogenic	1167
+5	Benign	2427
+5	Likely benign	797
+5	Likely pathogenic	531
+5	Pathogenic	2671
+6	Benign	2204
+6	Likely benign	797
+6	Likely pathogenic	671
+6	Pathogenic	1928
+7	Benign	2219
+7	Likely benign	816
+7	Likely pathogenic	602
+7	Pathogenic	2124
+8	Benign	1594
+8	Likely benign	557
+8	Likely pathogenic	468
+8	Pathogenic	1764
+9	Benign	1792
+9	Likely benign	824
+9	Likely pathogenic	633
+9	Pathogenic	2037
+MT	Benign	5
+MT	Likely benign	10
+MT	Likely pathogenic	13
+MT	Pathogenic	58
+X	Benign	1873
+X	Likely benign	927
+X	Likely pathogenic	869
+X	Pathogenic	5191
+Y	Benign	196
+Y	Likely benign	74
+Y	Likely pathogenic	8
+Y	Pathogenic	133
