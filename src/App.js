@@ -23,7 +23,7 @@ function App() {
   // fetch data
   useEffect(() => {
     const fetchData = async () => {
-      const d = await d3.tsv("/data/test.tsv");
+      const d = await d3.tsv("/data/counts_by_chromosome.tsv");
       setData(d);
     };
     fetchData();
