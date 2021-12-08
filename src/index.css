@@ -10,6 +10,10 @@ text {
   text-anchor: middle;
 }
 
+.text-anchor-start {
+  text-anchor: start;
+}
+
 .axis-tick-text {
   font-size: 1rem;
 }
@@ -21,4 +25,33 @@ text {
 .y-axis-tick-text {
   text-anchor: end;
   transform: translate(42px, 4px);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.legend-title {
+  font-size: 1em;
+  text-align: center;
+}
+
+.legend-element {
+  display: flex;
+  align-items: center;
+}
+
+.legend-element p {
+  margin-bottom: 0;
+  padding-left: 0.25em;
+  padding-right: 1em;
+}
+
+.legend-bubble {
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
 }

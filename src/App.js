@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as d3 from "d3";
 import BarChart from "./components/BarChart";
 import GenomePlots from "./components/GenomePlots";
+import Legend from "./components/Legend";
 import { getDimensions } from "./utils/getDimensions";
 import "./App.css";
 
@@ -45,6 +46,20 @@ function App() {
     window.addEventListener("resize", handleResize);
   }, []);
 
+  const pathLevels = [
+    "Uncertain significance",
+    "Benign",
+    "Likely pathogenic",
+    "Pathogenic",
+  ];
+
+  const colourMap = {
+    "Uncertain significance": "#818589",
+    Benign: "#4dac26",
+    "Likely pathogenic": "#eb95df",
+    Pathogenic: "#d01c8b",
+  };
+
   return (
     <>
       <h1>ClinVar Structural Variants</h1>
@@ -52,22 +67,18 @@ function App() {
       <main className="dashboard">
         <GenomePlots width={circosWidth} />
         <div className="side">
-          <p>
-            Will contain summary bar charts for ClinVar dataset and user dataset
-          </p>
           {data && data.length > 0 && (
             <BarChart
               data={data}
+              pathLevels={pathLevels}
+              colourMap={colourMap}
               title="ClinVar Variants"
               wrapperWidth={barChartDims.wrapperWidth}
               wrapperHeight={barChartDims.wrapperHeight}
+              leftOffset={50}
             />
           )}
-          <p>
-            <br />
-            <br />
-            Container for showing individual variant info on hover
-          </p>
+          <Legend pathLevels={pathLevels} colourMap={colourMap} />
         </div>
       </main>
     </>

@@ -4,13 +4,13 @@ import * as d3 from "d3";
 import BarChartXAxis from "./BarChartXAxis";
 import BarChartYAxis from "./BarChartYAxis";
 
-const BarChart = ({ data, wrapperWidth, wrapperHeight, title }) => {
+const BarChart = ({ data, wrapperWidth, wrapperHeight, title, pathLevels, colourMap, leftOffset }) => {
   // sizing
   const margin = {
     top: 25,
     right: 5,
     bottom: 35,
-    left: 50,
+    left: leftOffset,
   };
   const boundsWidth = wrapperWidth - margin.left - margin.right;
   const boundsHeight = wrapperHeight - margin.top - margin.bottom;
@@ -24,20 +24,13 @@ const BarChart = ({ data, wrapperWidth, wrapperHeight, title }) => {
   const chromosomeTotals = data.map(
     (d) =>
       parseInt(d.Benign) +
-      parseInt(d["Likely benign"]) +
+      parseInt(d["Uncertain significance"]) +
       parseInt(d.Pathogenic) +
       parseInt(d["Likely pathogenic"])
   );
 
-  const variantTypes = [
-    "Likely benign",
-    "Benign",
-    "Likely pathogenic",
-    "Pathogenic",
-  ];
-
   // stack data
-  const stack = d3.stack().keys(variantTypes)(data);
+  const stack = d3.stack().keys(pathLevels)(data);
 
   // scales
   const xScale = d3
@@ -49,10 +42,8 @@ const BarChart = ({ data, wrapperWidth, wrapperHeight, title }) => {
     .scaleLinear()
     .domain([0, Math.max(...chromosomeTotals)])
     .range([boundsHeight + margin.top, margin.top]);
-  const colourScale = d3
-    .scaleOrdinal()
-    .domain(variantTypes)
-    .range(["#c2a5cf", "#7b3294", "#a6dba0", "#008837"]);
+  const colourRange = pathLevels.map((t) => colourMap[t]);
+  const colourScale = d3.scaleOrdinal().domain(pathLevels).range(colourRange);
 
   // axes
   const xAxis = chromosomes.map((c, i) => ({
@@ -83,7 +74,7 @@ const BarChart = ({ data, wrapperWidth, wrapperHeight, title }) => {
               x={xScale(d.data.Chromosome)}
               y={yScale(d[1])}
               height={yScale(d[0]) - yScale(d[1])}
-              fill={colourScale(variantTypes[i])}
+              fill={colourScale(pathLevels[i])}
             />
           );
         })
