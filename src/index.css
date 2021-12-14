@@ -6,12 +6,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* d3 bar chart styles */
+
+.bar-chart {
+  margin-bottom: 1em;
+}
+
 text {
   text-anchor: middle;
 }
 
 .text-anchor-start {
   text-anchor: start;
+}
+
+.chart-title {
+  text-anchor: middle;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .axis-tick-text {
@@ -27,7 +39,9 @@ text {
   transform: translate(42px, 4px);
 }
 
-.legend {
+/* legend styles */
+
+.legend-colours {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -35,7 +49,9 @@ text {
 }
 
 .legend-title {
-  font-size: 1em;
+  margin-top: 1em;
+  font-size: 1.5rem;
+  font-weight: 600;
   text-align: center;
 }
 

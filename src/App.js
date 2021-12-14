@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as d3 from "d3";
+import { range } from "lodash";
 import BarChart from "./components/BarChart";
 import GenomePlots from "./components/GenomePlots";
 import Legend from "./components/Legend";
@@ -12,19 +13,36 @@ import "./App.css";
 // bar charts / hover details = 40% width of main
 // see App.css
 
+const chromosomes = range(1, 23)
+  .map((c) => `${c}`)
+  .concat(["X", "Y"]);
+
 function App() {
-  const [data, setData] = useState([]);
+  const [clinvarData, setClinvarData] = useState([]);
+  const [matchData, setMatchData] = useState([]);
   const [circosWidth, setCircosWidth] = useState(getDimensions(0.6));
   const [barChartDims, setBarChartDims] = useState({
     wrapperWidth: getDimensions(0.4),
     wrapperHeight: getDimensions(0.4 * 0.6), // height of bar chart is 0.6 of width
   });
 
-  // fetch data
+  // fetch clinvar data
   useEffect(() => {
     const fetchData = async () => {
-      const d = await d3.tsv("/data/counts_by_chromosome.tsv");
-      setData(d);
+      const d = await d3.tsv("/data/clinvar_counts_by_chromosome.tsv");
+
+      // remove MT chromosome
+      const variants = d.filter((v) => chromosomes.includes(v.Chromosome));
+      setClinvarData(variants);
+    };
+    fetchData();
+  }, []);
+
+  // fetch match data
+  useEffect(() => {
+    const fetchData = async () => {
+      const d = await d3.tsv("/data/hg002_matches_counts_by_chromosome.tsv");
+      setMatchData(d);
     };
     fetchData();
   }, []);
@@ -62,14 +80,16 @@ function App() {
 
   return (
     <>
-      <h1>ClinVar Structural Variants</h1>
+      <h1>Structural Variant Pathogenicity</h1>
 
       <main className="dashboard">
         <GenomePlots width={circosWidth} />
         <div className="side">
-          {data && data.length > 0 && (
+          <Legend pathLevels={pathLevels} colourMap={colourMap} />
+          {clinvarData.length > 0 && (
             <BarChart
-              data={data}
+              data={clinvarData}
+              chromosomes={chromosomes}
               pathLevels={pathLevels}
               colourMap={colourMap}
               title="ClinVar Variants"
@@ -78,7 +98,18 @@ function App() {
               leftOffset={50}
             />
           )}
-          <Legend pathLevels={pathLevels} colourMap={colourMap} />
+          {matchData.length > 0 && (
+            <BarChart
+              data={matchData}
+              chromosomes={chromosomes}
+              pathLevels={pathLevels}
+              colourMap={colourMap}
+              title="HG002 Matches"
+              wrapperWidth={barChartDims.wrapperWidth}
+              wrapperHeight={barChartDims.wrapperHeight}
+              leftOffset={50}
+            />
+          )}
         </div>
       </main>
     </>

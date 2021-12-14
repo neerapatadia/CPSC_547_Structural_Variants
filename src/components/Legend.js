@@ -4,7 +4,7 @@ const Legend = ({ pathLevels, colourMap }) => {
   return (
     <>
       <h3 className="legend-title">Clinical Significance</h3>
-      <div className="legend">
+      <div className="legend-colours">
         {pathLevels.map((l) => {
           return (
             <div className="legend-element">
