@@ -2,10 +2,6 @@ import React from "react";
 import { useTable, usePagination } from "react-table";
 import Select from "react-select";
 
-// TODO: clean data and sort by chromosome
-// convert similarity to a random number
-// convert 'not specified' or 'not provided' to -
-
 const pageSelectOptions = [10, 20, 30].map((c) => ({
   value: c,
   label: `Show ${c}`,
