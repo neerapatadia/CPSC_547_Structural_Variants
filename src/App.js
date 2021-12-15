@@ -15,7 +15,7 @@ import "./App.css";
 // bar charts / hover details = 40% width of main
 // see App.css
 
-// TODO: pick colour for "no match"
+// TODO: try layout with one track for all SVs, one track for matches
 
 const chromosomes = range(1, 23)
   .map((c) => `${c}`)
@@ -34,7 +34,8 @@ const pathLevels = [
 ];
 
 const colourMap = {
-  "Uncertain significance": "#818589",
+  "No match": "#818589",
+  "Uncertain significance": "#0092D0",
   Benign: "#4dac26",
   "Likely pathogenic": "#eb95df",
   Pathogenic: "#d01c8b",
@@ -81,7 +82,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       setTableLoading(true);
-      const d = await d3.tsv("data/allmatched_clean.tsv");
+      const d = await d3.tsv("/data/allmatched_clean.tsv");
 
       if (selectedChrom) {
         const matches = d.filter((v) => v.CHROM === selectedChrom);
@@ -162,7 +163,12 @@ function App() {
       <h1>Structural Variant Pathogenicity</h1>
 
       <main className="container dashboard">
-        <GenomePlots width={circosWidth} />
+        <GenomePlots
+          width={circosWidth}
+          selectedChrom={selectedChrom}
+          pathLevels={pathLevels}
+          colourMap={colourMap}
+        />
         <div className="side">
           <div className="sidebar-margin-left">
             <h3 className="legend-title">Select Chromosome</h3>
@@ -172,7 +178,7 @@ function App() {
               onChange={handleSelectedChromChange}
             />
           </div>
-          <Legend pathLevels={pathLevels} colourMap={colourMap} />
+          <Legend colourMap={colourMap} />
           {clinvarSummary.length > 0 && (
             <BarChart
               data={clinvarSummary}
