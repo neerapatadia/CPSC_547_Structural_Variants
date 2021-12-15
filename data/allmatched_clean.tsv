@@ -1,195 +1,60 @@
 CHROM	POS	END	Similarity	AlleleID	Type	HGNC_ID	ClinicalSignificance	PhenotypeList
-11	64367081	64367116	0.0	1223160	Deletion	HGNC:17989	Benign	-
-11	65308174	65308228	51.35	1244607	Duplication	HGNC:6716	Benign	-
-11	71936225	71936253	100.0	1236347	Deletion	HGNC:6080	Benign	-
-11	76895770	76895792	100.0	52377	Deletion	HGNC:7606	Benign	Nonsyndromic hearing loss and deafness;Deafness, autosomal recessive 2
-11	88024737	88024771	71.43	1038107	Microsatellite	HGNC:2528	Uncertain significance	-
-11	113230773	113230793	89.36	1242342	Microsatellite	HGNC:23700	Benign	-
-12	1006052	1006078	100.0	1285596	Microsatellite	HGNC:14540	Benign	-
-12	6452811	6452846	100.0	1038170	Insertion	HGNC:11916	Uncertain significance	-
-12	7343108	7343153	66.67	582852	Duplication	HGNC:9719	Uncertain significance	-
-12	7355777	7355825	100.0	1287165	Deletion	HGNC:9719	Benign	-
-12	7355820	7356129	0.63	1246837	Deletion	HGNC:9719	Benign	-
-12	7362204	7362236	100.0	791275	Insertion	HGNC:9719	Benign	Peroxisome biogenesis disorder 1A (Zellweger)
-12	20968645	20968669	50.0	981776	Deletion	HGNC:10961	Benign	Rotor syndrome
-12	21031069	21031092	100.0	1172392	Deletion	HGNC:10961	Benign	-
-12	22016216	22016262	100.0	666443	Deletion	HGNC:60	Benign	-
-12	25378220	25378246	100.0	1257024	Deletion	HGNC:6407	Benign	-
-12	40692580	40692604	55.56	1262027	Microsatellite	HGNC:18618	Benign	-
-12	40692662	40692689	100.0	1247290	Microsatellite	HGNC:18618	Benign	-
-12	41318683	41318705	95.45	1245220	Microsatellite	HGNC:2171	Benign	-
-12	50480262	50480283	62.5	1235491	Microsatellite	HGNC:11106	Benign	-
-12	50898784	50898814	0.0	16009	Microsatellite	HGNC:29284	Pathogenic	Mental retardation, fra12a type
-12	52096440	52096481	100.0	667107	Deletion	HGNC:10596	Benign	-
-12	53069222	53069243	100.0	77536	Deletion	HGNC:6412	Benign	-
-12	53183951	53183972	100.0	702380	Duplication	HGNC:6440	Benign	-
-12	53207583	53207625	100.0	702383	Insertion	HGNC:6441	Benign	-
-12	124155337	124155362	100.0	1240687	Duplication	HGNC:25774	Benign	-
-12	133195662	133195694	100.0	1227553	Microsatellite	HGNC:15459	Benign	-
-12	133197449	133197510	100.0	1275523	Deletion	HGNC:15459	Benign	-
-12	133295206	133295594	1.02	1229256	Insertion	HGNC:28763	Benign	-
-12	133306920	133306983	0.0	1263996	Deletion	HGNC:29101	Benign	-
-13	20939356	20939376	0.0	247435	Deletion	HGNC:4284	Pathogenic	Deafness, autosomal recessive 1A
-13	25456347	25456395	50.0	1237950	Microsatellite	HGNC:17272	Benign	-
-13	25463709	25463729	100.0	1282808	Deletion	HGNC:17272	Benign	-
-13	32960704	32960735	100.0	259513	Deletion	HGNC:1101	Benign	Breast-ovarian cancer, familial 2
-13	38326212	38326250	0.0	514821	Translocation	HGNC:12336	Uncertain significance	-
-13	70713512	70713533	0.0	15231	Microsatellite	-	Benign	Spinocerebellar ataxia type 8
-13	111145398	111145428	100.0	1248738	Microsatellite	HGNC:2203	Benign	-
-13	113771917	113771954	5.13	615744	Deletion	HGNC:3544	Uncertain significance	Factor VII deficiency
-14	24718379	24718401	100.0	1214795	Microsatellite	HGNC:11777	Benign	-
-14	67632165	67632187	100.0	1228662	Microsatellite	HGNC:15465	Benign	-
-14	74711602	74711642	4.76	1270059	Microsatellite	HGNC:1975	Benign	-
-14	92537353	92537374	93.02	1200033	Insertion	HGNC:7106	Benign	-
-14	92537353	92537392	68.85	1200033	Insertion	HGNC:7106	Benign	-
-14	92537354	92537381	85.71	1200033	Insertion	HGNC:7106	Benign	-
-14	102511064	102511092	100.0	1212109	Deletion	HGNC:2961	Benign	-
-14	102513978	102514000	23.08	1238673	Insertion	HGNC:2961	Benign	-
-14	102964359	102964383	100.0	667346	Duplication	HGNC:19957	Benign	-
-14	105242404	105242441	100.0	1276697	Deletion	HGNC:391	Benign	-
-15	23685922	23685943	100.0	1038314	Insertion	HGNC:26695	Uncertain significance	-
-15	34150120	34150140	100.0	1157429	Microsatellite	HGNC:10485	Benign	Epileptic encephalopathy
-15	40309702	40309722	0.0	1278380	Deletion	HGNC:19687	Benign	-
-15	53807252	53807334	6.98	322898	Microsatellite	HGNC:26790	Uncertain significance	Amelogenesis Imperfecta, Recessive
-15	58852849	58852869	100.0	1270936	Deletion	HGNC:6619	Benign	-
-15	59497708	59497728	100.0	1237071	Duplication	HGNC:7599	Benign	-
-15	65322165	65322185	70.59	1271417	Microsatellite	HGNC:29666	Benign	-
-15	68522105	68522125	100.0	1038347	Duplication	HGNC:2077	Uncertain significance	-
-15	72142031	72142055	100.0	1268372	Deletion	HGNC:7608	Benign	-
-15	90172419	90172441	100.0	1276996	Deletion	HGNC:30497	Benign	-
-15	100649465	100649487	100.0	1247581	Insertion	HGNC:17109	Benign	-
-15	100693158	100693203	8.33	1255972	Insertion	HGNC:17109	Benign	-
-15	100693159	100693198	6.35	1255972	Insertion	HGNC:17109	Benign	-
-15	100693174	100693204	12.12	1255972	Insertion	HGNC:17109	Benign	-
-15	101791684	101791711	80.85	1272519	Microsatellite	HGNC:17198	Benign	-
-16	188303	188335	100.0	1279708	Microsatellite	HGNC:14124	Benign	-
-16	629427	629547	100.0	1275553	Deletion	HGNC:14135	Benign	-
-16	1203321	1203355	100.0	1268538	Microsatellite	HGNC:1395	Benign	-
-16	1500329	1500360	100.0	1229937	Duplication	HGNC:2025	Benign	-
-16	1500688	1500926	0.0	1175408	Duplication	HGNC:2025	Benign	Hypopigmentation, organomegaly, and delayed myelination and development;Autosomal recessive osteopetrosis 4;Autosomal dominant osteopetrosis 2
-16	23388895	23388941	4.17	1251072	Deletion	HGNC:10600	Benign	-
-16	23388895	23388918	8.0	1251072	Deletion	HGNC:10600	Benign	-
-16	28507397	28507424	100.0	703605	Microsatellite	HGNC:24087	Benign	-
-16	29725602	29725623	0.0	154997	copy number loss	-	Benign	-
-16	46732095	46732115	76.47	343036	Microsatellite	HGNC:17151	Uncertain significance	Meier-Gorlin syndrome
-16	81941530	81941553	100.0	1225887	Deletion	HGNC:9066	Benign	-
-16	88506287	88506314	100.0	342833	Microsatellite	HGNC:23216	Benign	Brittle cornea syndrome 1
-16	88779323	88779401	2.5	778341	Deletion	HGNC:28005	Benign	-
-16	88798325	88800368	8.24	982051	Insertion	-	Benign	none provided
-16	88798330	88798365	46.1	982051	Insertion	-	Benign	none provided
-17	1386095	1386173	11.9	1241814	Insertion	HGNC:7597	Benign	-
-17	4802255	4802275	100.0	668891	Deletion	HGNC:1966	Benign	-
-17	4837171	4837210	0.0	976789	Deletion	HGNC:4439	Uncertain significance	Abnormal bleeding;Thrombocytopenia
-17	6358974	6359335	1.9	1158083	Insertion	HGNC:21043	Benign	-
-17	29662308	29662336	12.5	1278986	Insertion	HGNC:7765	Benign	-
-17	29662315	29662390	4.88	1278986	Insertion	HGNC:7765	Benign	-
-17	29662318	29662363	100.0	1258183	Microsatellite	HGNC:7765	Benign	-
-17	39190973	39191003	100.0	704130	Insertion	HGNC:16771	Benign	-
-17	40270029	40270068	100.0	778488	Deletion	HGNC:4201	Benign	-
-17	40489892	40490192	100.0	1157973	Deletion	HGNC:11364	Benign	Hyper-IgE recurrent infection syndrome 1, autosomal dominant;STAT3 gain of function
-17	41223538	41223562	100.0	259558	Insertion	HGNC:1100	Benign	Breast-ovarian cancer, familial 1
-17	44223907	44224221	0.0	170820	copy number loss	-	Benign	-
-17	45367814	45367834	100.0	1255383	Microsatellite	HGNC:6156	Benign	-
-17	48277059	48277080	100.0	1249223	Microsatellite	HGNC:2197	Benign	-
-17	57168896	57168935	100.0	1239101	Microsatellite	HGNC:7523	Benign	-
-17	71188967	71189069	100.0	1276611	Deletion	HGNC:6545	Benign	-
-17	71188989	71189023	0.0	1276611	Deletion	HGNC:6545	Benign	-
-17	71188989	71189037	0.0	1276611	Deletion	HGNC:6545	Benign	-
-17	73833087	73833113	100.0	1220785	Microsatellite	HGNC:23147	Benign	-
-17	76429996	76430032	100.0	1233650	Deletion	HGNC:2946	Benign	-
-17	76554529	76554551	100.0	1259888	Microsatellite	HGNC:2946	Benign	-
-17	78055186	78055206	91.3	1251281	Microsatellite	HGNC:26090	Benign	-
-17	78064015	78064047	5.88	1262212	Deletion	HGNC:26090	Benign	-
-17	78064216	78064248	100.0	1247986	Microsatellite	HGNC:26090	Benign	-
-17	78971150	78971185	5.41	778559	Deletion	HGNC:25675	Benign	-
-18	10731173	10731200	100.0	1283693	Deletion	HGNC:26270	Benign	-
-18	10795314	10795350	100.0	1271557	Deletion	HGNC:26270	Benign	-
-18	31314008	31314034	100.0	1259653	Microsatellite	HGNC:29357	Benign	-
-18	55398540	55398578	100.0	1258263	Microsatellite	HGNC:3706	Benign	-
-18	77488698	77488741	100.0	791884	Duplication	HGNC:2498	Benign	Congenital cataracts-facial dysmorphism-neuropathy syndrome
-19	4123543	4123569	7.14	1249770	Microsatellite	HGNC:6842	Benign	-
-19	4123551	4123577	100.0	1249770	Microsatellite	HGNC:6842	Benign	-
-19	5131560	5131887	0.61	1087468	Microsatellite	HGNC:29136	Pathogenic	INTELLECTUAL DEVELOPMENTAL DISORDER, AUTOSOMAL DOMINANT 65
-19	5691987	5692016	100.0	1247078	Duplication	HGNC:9479	Benign	-
-19	5708484	5708581	4.0	1257639	Duplication	HGNC:9479	Benign	-
-19	6710430	6710452	100.0	1256649	Deletion	HGNC:1318	Benign	-
-19	7595050	7595070	100.0	1253518	Deletion	HGNC:13356	Benign	-
-19	11322234	11322271	100.0	1253599	Microsatellite	HGNC:19189	Benign	-
-19	14070706	14070726	100.0	778497	Duplication	HGNC:25095	Benign	-
-19	33349674	33349694	61.76	1285343	Microsatellite	HGNC:11067	Benign	-
-19	38993424	38993454	100.0	1253491	Deletion	HGNC:10483	Benign	-
-19	43690009	43690053	0.0	156887	copy number loss	-	Benign	-
-19	46273462	46273489	0.0	961920	Microsatellite	HGNC:2933	Benign	Steinert myotonic dystrophy syndrome
-19	46273462	46273507	0.0	961920	Microsatellite	HGNC:2933	Benign	Steinert myotonic dystrophy syndrome
-19	50752815	50752836	100.0	1212607	Microsatellite	HGNC:23212	Benign	-
-19	50795772	50795818	100.0	1267669	Deletion	HGNC:23212	Benign	-
-19	53116933	53117017	100.0	705225	Deletion	HGNC:13158	Benign	-
-19	55671134	55671171	100.0	1173297	Deletion	HGNC:30492	Benign	-
-20	2633378	2633402	7.69	131984	Microsatellite	HGNC:15911	Benign	Spinocerebellar ataxia 36
-20	18535590	18535620	100.0	1269385	Microsatellite	HGNC:10702	Benign	-
-20	30250848	30250926	100.0	1038761	Microsatellite	HGNC:992	Uncertain significance	-
-20	33588698	33588720	100.0	778678	Deletion	HGNC:15906	Benign	-
-20	60866874	60866933	68.13	1235725	Microsatellite	HGNC:15761	Benign	-
-20	60866882	60866912	100.0	1235725	Microsatellite	HGNC:15761	Benign	-
-20	60907982	60908003	53.33	1264816	Microsatellite	HGNC:6485	Benign	-
-20	60907982	60908009	44.44	1264816	Microsatellite	HGNC:6485	Benign	-
-20	61462003	61462252	21.58	1220510	Insertion	HGNC:2219	Benign	-
-20	61991255	61991281	56.52	1286237	Insertion	HGNC:1958	Benign	-
-20	61991259	61991296	47.37	1286237	Insertion	HGNC:1958	Benign	-
-20	62046769	62046810	66.67	669215	Insertion	HGNC:6296	Benign	-
-20	62561037	62561063	100.0	1220358	Duplication	HGNC:16235	Benign	-
-21	36042462	36042492	100.0	705666	Deletion	HGNC:2065	Benign	-
-21	43897065	43897632	0.35	1223604	Microsatellite	HGNC:12371	Benign	-
-21	43897083	43897116	100.0	1223604	Microsatellite	HGNC:12371	Benign	-
-21	43897120	43897235	100.0	1240133	Deletion	HGNC:12371	Benign	-
-21	44478097	44478128	100.0	669332	Deletion	HGNC:1550	Benign	-
-21	45815567	45815617	0.0	1277681	Deletion	HGNC:12339	Benign	-
-21	45815583	45815623	100.0	1277681	Deletion	HGNC:12339	Benign	-
-21	46825001	46825034	100.0	1262232	Deletion	HGNC:2195	Benign	-
-21	46825202	46825259	9.84	1279628	Insertion	HGNC:2195	Benign	-
-21	46910397	46910482	4.49	1248139	Insertion	HGNC:2195	Benign	-
-21	46927370	46927412	100.0	1263991	Deletion	HGNC:2195	Benign	-
-21	46930865	46930901	100.0	1237571	Deletion	HGNC:2195	Benign	-
-21	46930865	46930923	100.0	1237571	Deletion	HGNC:2195	Benign	-
-21	47407708	47407894	0.0	670663	Deletion	HGNC:2211	Benign	-
-21	47409912	47409946	100.0	1282705	Microsatellite	HGNC:2211	Benign	-
-21	47410353	47410419	20.25	852405	Insertion	HGNC:2211	Uncertain significance	Bethlem myopathy 1
-21	47410379	47410568	1.05	1210767	Deletion	HGNC:2211	Benign	-
-21	47417051	47417114	100.0	670478	Deletion	HGNC:2211	Benign	-
-21	47540039	47540096	3.39	670499	Deletion	HGNC:2212	Benign	-
-21	47754471	47754510	97.5	800183	Insertion	HGNC:16068	Benign	Microcephalic osteodysplastic primordial dwarfism type II
-22	17663666	17663693	100.0	982244	Microsatellite	HGNC:1839	Benign	none provided;Polyarteritis nodosa, childhoood-onset
-22	24176677	24176700	100.0	1238954	Microsatellite	HGNC:11103	Benign	-
-22	26317669	26317689	100.0	1268688	Microsatellite	HGNC:18150	Benign	-
-22	26879946	26879967	100.0	390411	Microsatellite	HGNC:15844	Benign	-
-22	31012012	31012040	100.0	1251917	Microsatellite	HGNC:11653	Benign	-
-22	32899811	32899853	100.0	1038829	Insertion	HGNC:13586	Uncertain significance	-
-22	37268665	37268713	100.0	1273121	Deletion	HGNC:7662	Benign	-
-22	44642734	44642767	0.0	804707	copy number gain	-	Uncertain significance	-
-X	387376	387872	0.0	673996	copy number gain	-	Uncertain significance	-
-X	878086	879166	0.0	672800	copy number gain	-	Uncertain significance	-
-X	10180877	10180903	20.0	1283137	Duplication	HGNC:2022	Benign	-
-X	30811558	30811636	0.0	608160	copy number loss	-	Benign	-
-X	32470399	32470545	0.0	1265221	Deletion	HGNC:2928	Benign	-
-X	32470410	32470451	100.0	1265221	Deletion	HGNC:2928	Benign	-
-X	34148805	34148844	100.0	706221	Microsatellite	HGNC:29962	Benign	-
-X	41057619	41057684	100.0	1260775	Deletion	HGNC:12632	Benign	-
-X	70352617	70352647	11.76	1210849	Microsatellite	HGNC:11957	Benign	-
-X	77086467	77086487	100.0	1286183	Microsatellite	HGNC:28880	Benign	-
-X	146993599	146993632	21.05	1262260	Microsatellite	HGNC:3775	Benign	-
-X	147582157	147582184	6.9	25565	Microsatellite	HGNC:3776	Pathogenic	FRAXE
+1	19308406	19308426	9.09	653023	Deletion	HGNC:9987	Likely pathogenic	Bare lymphocyte syndrome 2
+1	102511070	102511112	4.55	1212109	Deletion	HGNC:2961	Benign	-
+1	102511060	102511100	4.76	1212109	Deletion	HGNC:2961	Benign	-
+1	102455150	102455199	7.69	642080	Duplication	HGNC:2961	Uncertain significance	Charcot-Marie-Tooth disease, axonal, type 2O
+1	100657299	100657331	100.0	1241732	Deletion	HGNC:2698	Benign	-
+1	95570219	95570241	8.0	921345	Duplication	HGNC:17098	Pathogenic	DICER1-related pleuropulmonary blastoma cancer predisposition syndrome
+1	92679004	92679066	6.15	198351	Duplication	HGNC:15819	Uncertain significance	ANKRD1-related dilated cardiomyopathy;Cardiovascular phenotype;Primary dilated cardiomyopathy
+1	105803315	105803335	9.09	205161	Deletion	HGNC:2194	Likely pathogenic	Junctional epidermolysis bullosa, non-Herlitz type
 1	10616	10637	0.0	435724	copy number loss	-	Likely pathogenic	-
-1	899922	899992	100.0	1153756	Deletion	HGNC:24023	Benign	-
 1	977156	977203	100.0	656917	Deletion	HGNC:329	Benign	-
 1	1184468	1184596	0.0	74155	copy number loss	-	Pathogenic	-
 1	1229111	1229131	0.0	73267	copy number gain	-	Pathogenic	-
 1	1413217	1413350	1.48	324097	Microsatellite	HGNC:23026	Uncertain significance	Mucolipidosis type III gamma
 1	1413217	1413367	10.53	324097	Microsatellite	HGNC:23026	Uncertain significance	Mucolipidosis type III gamma
 1	2583441	2583522	0.0	486767	Deletion	HGNC:8574	Likely pathogenic	Lissencephaly due to LIS1 mutation
+1	899922	899992	100.0	1153756	Deletion	HGNC:24023	Benign	-
+1	110603286	110603314	100.0	1229879	Insertion	HGNC:449	Benign	-
+1	111896187	111898241	0.0	820427	Deletion	HGNC:2896	Pathogenic	Pyruvate dehydrogenase E2 deficiency
+1	111957501	111957525	100.0	695986	Deletion	HGNC:8524	Benign	-
+1	237754389	237754434	100.0	1262575	Deletion	HGNC:10484	Benign	-
+1	237060600	237060640	13.64	1260543	Insertion	HGNC:7468	Benign	-
+1	237060600	237060620	25.0	1260543	Insertion	HGNC:7468	Benign	-
+1	236900597	236900633	10.0	1247236	Microsatellite	HGNC:164	Benign	-
+1	235543476	235543496	100.0	1250141	Microsatellite	HGNC:11582	Benign	-
+1	213070508	213070532	100.0	280296	Microsatellite	HGNC:24682	Benign	Posterior column ataxia-retinitis pigmentosa syndrome
+1	201081050	201081078	6.67	1228493	Microsatellite	HGNC:1397	Benign	-
+1	179876726	179876760	0.0	1285977	Microsatellite	HGNC:29456	Benign	-
+1	161279342	161279384	4.55	1170616	Deletion	HGNC:7225	Benign	-
+1	154842199	154842220	84.21	1280337	Microsatellite	HGNC:6292	Benign	-
+1	152327436	152327667	100.0	970660	Deletion	HGNC:33276	Benign	Peeling skin syndrome 6
+1	152129065	152129101	100.0	696101	Deletion	HGNC:26809	Benign	-
+1	111957547	111957592	0.0	1057523	Deletion	HGNC:10683	Pathogenic	Cowden syndrome 3;Pheochromocytoma;Paragangliomas 1;Carney-Stratakis syndrome
+1	111957523	111957544	100.0	246857	Insertion	HGNC:8524	Benign	-
+1	111957514	111957583	0.0	695986	Deletion	HGNC:8524	Benign	-
 1	2583628	2583706	0.0	265009	Deletion	HGNC:8574	Pathogenic	-
+1	248727925	248727963	0.0	156982	copy number loss	-	Benign	-
 1	2606545	2606585	0.0	67630	Deletion	HGNC:6294	Pathogenic	Cardiovascular phenotype
-1	2775802	2775880	0.0	950473	Deletion	HGNC:29090	Uncertain significance	Facioscapulohumeral muscular dystrophy 2
 1	3319601	3319632	100.0	1287155	Deletion	HGNC:14000	Benign	-
+1	26134788	26134833	100.0	1260363	Microsatellite	HGNC:15999	Benign	-
+1	29426842	29427169	0.0	555096	copy number gain	-	Uncertain significance	-
+1	31205220	31207796	0.23	342820	Duplication	HGNC:4010	Uncertain significance	Amyotrophic Lateral Sclerosis, Dominant
+1	32451981	32452006	0.0	1259637	Insertion	HGNC:12796	Benign	-
+1	49446390	49446424	0.0	962167	Duplication	HGNC:7133	Likely pathogenic	Kabuki syndrome 1
+1	55076137	55076166	100.0	696798	Deletion	HGNC:25032	Benign	-
+1	25585373	25655516	0.0	983697	Deletion	HGNC:12496	Pathogenic	Angelman syndrome
+1	56128963	56128989	6.9	76647	Duplication	HGNC:14674	Pathogenic	Usher syndrome, type 1G
+1	65891826	65891910	0.0	381315	copy number gain	-	Uncertain significance	-
+1	67693700	67693726	100.0	980563	Microsatellite	HGNC:25070	Pathogenic	Dyskeratosis congenita, autosomal dominant 6
+1	68572399	68572419	0.0	968519	copy number loss	-	Pathogenic	-
+1	72639006	72639295	0.66	905953	Deletion	HGNC:4878	Likely pathogenic	Tay-Sachs disease
+1	86046215	86046239	100.0	1271152	Deletion	HGNC:2654	Benign	-
+1	89257817	89259780	0.0	1173819	Deletion	HGNC:1754	Uncertain significance	-
+1	65891826	65891914	0.0	381315	copy number gain	-	Uncertain significance	-
+1	24671447	24671821	4.88	1252982	Microsatellite	HGNC:25839	Benign	-
+1	22985785	22985847	33.33	1273675	Microsatellite	HGNC:1242	Benign	-
+1	21902717	21902768	40.0	1238757	Microsatellite	HGNC:438	Benign	-
 1	3560092	3560601	0.0	1054165	Deletion	HGNC:2518	Pathogenic	Nephropathic cystinosis
 1	3639235	3639264	100.0	1063636	Deletion	HGNC:23845	Pathogenic	Fanconi anemia
 1	6220040	6220236	0.0	1053620	Deletion	HGNC:12726	Pathogenic	Von Willebrand disease, recessive form
@@ -202,207 +67,342 @@ X	147582157	147582184	6.9	25565	Microsatellite	HGNC:3776	Pathogenic	FRAXE
 1	15284857	15284897	66.67	982155	Duplication	HGNC:7883	Benign	none provided
 1	17124910	17124940	50.0	1063857	Insertion	HGNC:27310	Pathogenic	Multiple fibrofolliculomas
 1	17231894	17231919	13.33	1238363	Insertion	HGNC:15516	Benign	-
-1	19308406	19308426	9.09	653023	Deletion	HGNC:9987	Likely pathogenic	Bare lymphocyte syndrome 2
+1	91312663	91312683	9.09	547680	Deletion	HGNC:1058	Uncertain significance	Bloom syndrome
 1	21728322	21728342	0.0	381501	copy number gain	HGNC:20262	Benign	-
 1	21806313	21806335	0.0	248427	copy number loss	-	Uncertain significance	-
-1	21902717	21902768	40.0	1238757	Microsatellite	HGNC:438	Benign	-
-1	22985785	22985847	33.33	1273675	Microsatellite	HGNC:1242	Benign	-
-1	24671447	24671821	4.88	1252982	Microsatellite	HGNC:25839	Benign	-
-1	25585373	25655516	0.0	983697	Deletion	HGNC:12496	Pathogenic	Angelman syndrome
-1	26134788	26134833	100.0	1260363	Microsatellite	HGNC:15999	Benign	-
-1	29426842	29427169	0.0	555096	copy number gain	-	Uncertain significance	-
-1	31205220	31207796	0.23	342820	Duplication	HGNC:4010	Uncertain significance	Amyotrophic Lateral Sclerosis, Dominant
-1	32451981	32452006	0.0	1259637	Insertion	HGNC:12796	Benign	-
-1	49446390	49446424	0.0	962167	Duplication	HGNC:7133	Likely pathogenic	Kabuki syndrome 1
-1	55076137	55076166	100.0	696798	Deletion	HGNC:25032	Benign	-
-1	56128963	56128989	6.9	76647	Duplication	HGNC:14674	Pathogenic	Usher syndrome, type 1G
-1	65891826	65891914	0.0	381315	copy number gain	-	Uncertain significance	-
-1	65891826	65891910	0.0	381315	copy number gain	-	Uncertain significance	-
-1	67693700	67693726	100.0	980563	Microsatellite	HGNC:25070	Pathogenic	Dyskeratosis congenita, autosomal dominant 6
-1	68572399	68572419	0.0	968519	copy number loss	-	Pathogenic	-
-1	72639006	72639295	0.66	905953	Deletion	HGNC:4878	Likely pathogenic	Tay-Sachs disease
-1	86046215	86046239	100.0	1271152	Deletion	HGNC:2654	Benign	-
-1	89257817	89259780	0.0	1173819	Deletion	HGNC:1754	Uncertain significance	-
+1	2775802	2775880	0.0	950473	Deletion	HGNC:29090	Uncertain significance	Facioscapulohumeral muscular dystrophy 2
 1	89505866	89505891	7.14	1273730	Insertion	HGNC:8604	Benign	-
 1	91304023	91304066	4.35	812313	Duplication	HGNC:1058	Pathogenic	Hereditary cancer-predisposing syndrome
-1	91312663	91312683	9.09	547680	Deletion	HGNC:1058	Uncertain significance	Bloom syndrome
-1	92679004	92679066	6.15	198351	Duplication	HGNC:15819	Uncertain significance	ANKRD1-related dilated cardiomyopathy;Cardiovascular phenotype;Primary dilated cardiomyopathy
-1	95570219	95570241	8.0	921345	Duplication	HGNC:17098	Pathogenic	DICER1-related pleuropulmonary blastoma cancer predisposition syndrome
-1	100657299	100657331	100.0	1241732	Deletion	HGNC:2698	Benign	-
-1	102455150	102455199	7.69	642080	Duplication	HGNC:2961	Uncertain significance	Charcot-Marie-Tooth disease, axonal, type 2O
-1	102511060	102511100	4.76	1212109	Deletion	HGNC:2961	Benign	-
-1	102511070	102511112	4.55	1212109	Deletion	HGNC:2961	Benign	-
-1	105803315	105803335	9.09	205161	Deletion	HGNC:2194	Likely pathogenic	Junctional epidermolysis bullosa, non-Herlitz type
-1	110603286	110603314	100.0	1229879	Insertion	HGNC:449	Benign	-
-1	111896187	111898241	0.0	820427	Deletion	HGNC:2896	Pathogenic	Pyruvate dehydrogenase E2 deficiency
-1	111957501	111957525	100.0	695986	Deletion	HGNC:8524	Benign	-
-1	111957514	111957583	0.0	695986	Deletion	HGNC:8524	Benign	-
-1	111957523	111957544	100.0	246857	Insertion	HGNC:8524	Benign	-
-1	111957547	111957592	0.0	1057523	Deletion	HGNC:10683	Pathogenic	Cowden syndrome 3;Pheochromocytoma;Paragangliomas 1;Carney-Stratakis syndrome
-1	152129065	152129101	100.0	696101	Deletion	HGNC:26809	Benign	-
-1	152327436	152327667	100.0	970660	Deletion	HGNC:33276	Benign	Peeling skin syndrome 6
-1	154842199	154842220	84.21	1280337	Microsatellite	HGNC:6292	Benign	-
-1	161279342	161279384	4.55	1170616	Deletion	HGNC:7225	Benign	-
-1	179876726	179876760	0.0	1285977	Microsatellite	HGNC:29456	Benign	-
-1	201081050	201081078	6.67	1228493	Microsatellite	HGNC:1397	Benign	-
-1	213070508	213070532	100.0	280296	Microsatellite	HGNC:24682	Benign	Posterior column ataxia-retinitis pigmentosa syndrome
-1	235543476	235543496	100.0	1250141	Microsatellite	HGNC:11582	Benign	-
-1	236900597	236900633	10.0	1247236	Microsatellite	HGNC:164	Benign	-
-1	237060600	237060620	25.0	1260543	Insertion	HGNC:7468	Benign	-
-1	237060600	237060640	13.64	1260543	Insertion	HGNC:7468	Benign	-
-1	237754389	237754434	100.0	1262575	Deletion	HGNC:10484	Benign	-
-1	248727925	248727963	0.0	156982	copy number loss	-	Benign	-
+2	18570295	18570375	0.0	157481	copy number gain	-	Pathogenic	-
+2	241726187	241726221	5.56	1230865	Deletion	HGNC:888	Benign	-
+2	238254118	238254139	100.0	1235652	Deletion	HGNC:2213	Benign	-
+2	227967601	227967624	100.0	1226931	Deletion	HGNC:2206	Benign	-
+2	220341937	220341957	92.68	1237606	Insertion	HGNC:16901	Benign	-
+2	198359315	198359339	100.0	1250337	Deletion	HGNC:5261	Benign	-
+2	189861740	189861770	100.0	1216905	Microsatellite	HGNC:2201	Benign	-
+2	179315138	179315692	3.39	918701	Insertion	HGNC:9438	Benign	Dystonia 16
+2	179301048	179307992	3.03	1037095	Insertion	HGNC:9438	Likely pathogenic	Dystonia 16
+2	179296982	179306161	14.29	227228	Insertion	HGNC:9438	Uncertain significance	Dystonia 16
+2	179296981	179300871	14.29	227228	Insertion	HGNC:9438	Uncertain significance	Dystonia 16
+2	170038235	170038260	100.0	1238856	Deletion	HGNC:6694	Benign	-
+2	191745598	191745622	0.1	614667	Microsatellite	HGNC:4331	Pathogenic	Global developmental delay, progressive ataxia, and elevated glutamine
+2	62076176	62076230	0.0	495749	Duplication	HGNC:6296	Pathogenic	-
+2	84821407	84821443	10.26	1267621	Insertion	HGNC:2951	Benign	-
 2	1642803	1642855	100.0	1249786	Deletion	HGNC:14966	Benign	-
 2	15618164	15618194	100.0	1241214	Insertion	HGNC:15625	Benign	-
 2	17959588	17959618	0.0	1268058	Microsatellite	HGNC:26881	Benign	-
-2	18570295	18570375	0.0	157481	copy number gain	-	Pathogenic	-
-2	39315326	39315631	2.56	335406	Insertion	HGNC:6408	Uncertain significance	Multicentric carpo-tarsal osteolysis with or without nephropathy
 2	41924590	41924612	8.33	798114	Deletion	-	Uncertain significance	-
+2	39315326	39315631	2.56	335406	Insertion	HGNC:6408	Uncertain significance	Multicentric carpo-tarsal osteolysis with or without nephropathy
 2	41924617	41924639	0.0	798114	Deletion	-	Uncertain significance	-
 2	46745897	46745923	0.0	1267476	Deletion	HGNC:25481	Benign	-
 2	55881954	55881980	100.0	1211770	Deletion	HGNC:23166	Benign	-
 2	61880173	61881106	0.0	223100	Complex	-	Uncertain significance	Ductal breast carcinoma
 2	62076021	62076123	0.0	1058086	Deletion	HGNC:6296	Pathogenic	Early infantile epileptic encephalopathy with suppression bursts
-2	62076176	62076230	0.0	495749	Duplication	HGNC:6296	Pathogenic	-
-2	84821407	84821443	10.26	1267621	Insertion	HGNC:2951	Benign	-
-2	170038235	170038260	100.0	1238856	Deletion	HGNC:6694	Benign	-
-2	179296981	179300871	14.29	227228	Insertion	HGNC:9438	Uncertain significance	Dystonia 16
-2	179296982	179306161	14.29	227228	Insertion	HGNC:9438	Uncertain significance	Dystonia 16
-2	179301048	179307992	3.03	1037095	Insertion	HGNC:9438	Likely pathogenic	Dystonia 16
-2	179315138	179315692	3.39	918701	Insertion	HGNC:9438	Benign	Dystonia 16
-2	189861740	189861770	100.0	1216905	Microsatellite	HGNC:2201	Benign	-
-2	191745598	191745622	0.1	614667	Microsatellite	HGNC:4331	Pathogenic	Global developmental delay, progressive ataxia, and elevated glutamine
-2	198359315	198359339	100.0	1250337	Deletion	HGNC:5261	Benign	-
-2	220341937	220341957	92.68	1237606	Insertion	HGNC:16901	Benign	-
-2	227967601	227967624	100.0	1226931	Deletion	HGNC:2206	Benign	-
-2	238254118	238254139	100.0	1235652	Deletion	HGNC:2213	Benign	-
-2	241726187	241726221	5.56	1230865	Deletion	HGNC:888	Benign	-
-3	4739020	4739044	7.69	1287162	Microsatellite	HGNC:6180	Benign	-
-3	25824971	25825015	100.0	1219256	Microsatellite	HGNC:17646	Benign	-
-3	38534222	38534256	33.33	290229	Insertion	HGNC:174	Uncertain significance	Heterotaxia
-3	38627153	38627181	73.91	1274582	Microsatellite	HGNC:10593	Benign	-
-3	52597072	52597094	100.0	1258034	Deletion	HGNC:30064	Benign	-
-3	100945069	100945107	100.0	291494	Microsatellite	HGNC:18362	Uncertain significance	Retinitis Pigmentosa, Recessive
 3	107982683	107982706	0.0	673403	copy number gain	-	Uncertain significance	-
-3	123022685	123022705	0.0	1266107	Microsatellite	HGNC:236	Benign	-
 3	128891451	128891471	0.0	32603	Microsatellite	HGNC:13164	Pathogenic	Myotonic dystrophy type 2
+3	123022685	123022705	0.0	1266107	Microsatellite	HGNC:236	Benign	-
 3	129763380	129806745	0.0	200756	Deletion	HGNC:37258	Uncertain significance	Autistic disorder of childhood onset
+3	100945069	100945107	100.0	291494	Microsatellite	HGNC:18362	Uncertain significance	Retinitis Pigmentosa, Recessive
+3	4739020	4739044	7.69	1287162	Microsatellite	HGNC:6180	Benign	-
+3	38627153	38627181	73.91	1274582	Microsatellite	HGNC:10593	Benign	-
+3	38534222	38534256	33.33	290229	Insertion	HGNC:174	Uncertain significance	Heterotaxia
+3	25824971	25825015	100.0	1219256	Microsatellite	HGNC:17646	Benign	-
+3	52597072	52597094	100.0	1258034	Deletion	HGNC:30064	Benign	-
+4	5750276	5750344	100.0	1253837	Deletion	HGNC:3497	Benign	-
 4	1087327	1087348	8.7	1234191	Deletion	HGNC:27729	Likely pathogenic	Non-obstructive azoospermia
 4	3491837	3491861	91.3	660292	Insertion	HGNC:26594	Benign	-
-4	5750276	5750344	100.0	1253837	Deletion	HGNC:3497	Benign	-
 4	38772308	38772338	77.78	1037483	Insertion	HGNC:15634	Uncertain significance	-
-4	38772308	38772330	100.0	1037483	Insertion	HGNC:15634	Uncertain significance	-
 4	38794474	38794502	93.55	1037485	Microsatellite	HGNC:11847	Uncertain significance	-
-4	57368634	57368662	100.0	298845	Deletion	HGNC:11303	Benign	Bone marrow failure syndrome 1
-4	57797217	57797265	100.0	698580	Deletion	HGNC:9966	Benign	-
-4	71347138	71347207	100.0	698615	Deletion	HGNC:7518	Benign	-
-4	86491517	86491545	100.0	1260706	Microsatellite	HGNC:25361	Benign	-
-4	88536881	88536917	0.0	1262970	Deletion	HGNC:3054	Benign	-
-4	88537043	88537178	0.0	615790	Insertion	HGNC:3054	Likely pathogenic	Deafness, autosomal dominant 39, with dentinogenesis imperfecta 1
-4	88537285	88537420	0.0	793060	Deletion	HGNC:3054	Benign	none provided
-4	108865995	108866031	42.55	1253470	Insertion	HGNC:20582	Benign	-
+4	38772308	38772330	100.0	1037483	Insertion	HGNC:15634	Uncertain significance	-
 4	140306435	140306463	100.0	1220757	Deletion	HGNC:30782	Benign	-
+4	108865995	108866031	42.55	1253470	Insertion	HGNC:20582	Benign	-
+4	88537285	88537420	0.0	793060	Deletion	HGNC:3054	Benign	none provided
+4	88537043	88537178	0.0	615790	Insertion	HGNC:3054	Likely pathogenic	Deafness, autosomal dominant 39, with dentinogenesis imperfecta 1
 4	155505241	155505269	100.0	251346	Duplication	HGNC:3661	Benign	-
-5	1065298	1065320	100.0	1276106	Deletion	HGNC:10915	Benign	-
-5	1076526	1076555	57.78	1241862	Insertion	HGNC:10915	Benign	-
-5	1414517	1414584	2.9	1252341	Deletion	HGNC:11049	Benign	-
-5	1414517	1414656	1.42	1252341	Deletion	HGNC:11049	Benign	-
-5	1414523	1416043	0.13	1252341	Deletion	HGNC:11049	Benign	-
-5	11347039	11347062	100.0	1267761	Deletion	HGNC:2516	Benign	-
-5	13894938	13895487	0.0	48248	Duplication	HGNC:2950	Pathogenic	Ciliary dyskinesia, primary, 3;Primary ciliary dyskinesia
-5	34008206	34008226	100.0	1222233	Deletion	HGNC:451	Benign	-
-5	37245399	37245419	100.0	1288057	Microsatellite	HGNC:25801	Benign	-
-5	52390026	52390051	100.0	304507	Insertion	HGNC:6137	Uncertain significance	Platelet-type bleeding disorder 9
-5	78280723	78280831	0.0	1057172	Deletion	HGNC:714	Pathogenic	Mucopolysaccharidosis type 6
+4	86491517	86491545	100.0	1260706	Microsatellite	HGNC:25361	Benign	-
+4	71347138	71347207	100.0	698615	Deletion	HGNC:7518	Benign	-
+4	57797217	57797265	100.0	698580	Deletion	HGNC:9966	Benign	-
+4	57368634	57368662	100.0	298845	Deletion	HGNC:11303	Benign	Bone marrow failure syndrome 1
+4	88536881	88536917	0.0	1262970	Deletion	HGNC:3054	Benign	-
 5	96232568	96232668	100.0	777494	Duplication	HGNC:29499	Benign	-
-5	126770604	126770627	100.0	1171322	Deletion	HGNC:29634	Benign	-
-5	147503075	147503103	100.0	1277723	Deletion	HGNC:15464	Benign	-
-5	167945076	167945117	96.39	744216	Insertion	HGNC:9870	Benign	-
-5	176026119	176026143	100.0	1217092	Deletion	HGNC:24835	Benign	-
-5	177685263	177685283	0.0	383852	copy number gain	-	Uncertain significance	-
-5	177685263	177685303	0.0	383852	copy number gain	-	Uncertain significance	-
-5	180041274	180041308	14.63	1249841	Insertion	HGNC:3767	Benign	-
 5	180041274	180041444	6.78	1249841	Insertion	HGNC:3767	Benign	-
+5	180041274	180041308	14.63	1249841	Insertion	HGNC:3767	Benign	-
+5	177685263	177685303	0.0	383852	copy number gain	-	Uncertain significance	-
+5	177685263	177685283	0.0	383852	copy number gain	-	Uncertain significance	-
+5	176026119	176026143	100.0	1217092	Deletion	HGNC:24835	Benign	-
+5	167945076	167945117	96.39	744216	Insertion	HGNC:9870	Benign	-
+5	147503075	147503103	100.0	1277723	Deletion	HGNC:15464	Benign	-
+5	126770604	126770627	100.0	1171322	Deletion	HGNC:29634	Benign	-
+5	78280723	78280831	0.0	1057172	Deletion	HGNC:714	Pathogenic	Mucopolysaccharidosis type 6
+5	13894938	13895487	0.0	48248	Duplication	HGNC:2950	Pathogenic	Ciliary dyskinesia, primary, 3;Primary ciliary dyskinesia
+5	37245399	37245419	100.0	1288057	Microsatellite	HGNC:25801	Benign	-
+5	34008206	34008226	100.0	1222233	Deletion	HGNC:451	Benign	-
 5	180046426	180046448	100.0	1220862	Insertion	HGNC:3767	Benign	-
-6	18155353	18155387	0.0	306954	Deletion	HGNC:12014	Uncertain significance	Thiopurine methyltransferase deficiency
-6	32450724	32454366	0.0	156938	copy number gain	-	Benign	-
-6	35791147	35791167	50.0	307282	Microsatellite	HGNC:21253	Uncertain significance	Nonsyndromic Hearing Loss, Recessive
-6	52358163	52358185	16.0	1171600	Insertion	HGNC:16406	Benign	-
-6	74171257	74171289	100.0	1268505	Microsatellite	HGNC:19261	Benign	-
+5	1414523	1416043	0.13	1252341	Deletion	HGNC:11049	Benign	-
+5	1414517	1414656	1.42	1252341	Deletion	HGNC:11049	Benign	-
+5	1414517	1414584	2.9	1252341	Deletion	HGNC:11049	Benign	-
+5	1076526	1076555	57.78	1241862	Insertion	HGNC:10915	Benign	-
+5	1065298	1065320	100.0	1276106	Deletion	HGNC:10915	Benign	-
+5	52390026	52390051	100.0	304507	Insertion	HGNC:6137	Uncertain significance	Platelet-type bleeding disorder 9
+5	11347039	11347062	100.0	1267761	Deletion	HGNC:2516	Benign	-
+6	158564363	158564387	100.0	1276405	Deletion	HGNC:21061	Benign	-
+6	152685861	152685881	60.0	1259108	Insertion	HGNC:17089	Benign	-
 6	82461727	82461757	100.0	1239533	Microsatellite	HGNC:18345	Benign	-
+6	74171257	74171289	100.0	1268505	Microsatellite	HGNC:19261	Benign	-
 6	116951830	116952013	66.67	1279160	Duplication	HGNC:21558	Benign	-
 6	123851471	123851498	100.0	661247	Microsatellite	HGNC:12261	Benign	-
-6	152685861	152685881	60.0	1259108	Insertion	HGNC:17089	Benign	-
-6	158564363	158564387	100.0	1276405	Deletion	HGNC:21061	Benign	-
-7	286502	286536	100.0	1235142	Insertion	HGNC:22140	Benign	-
-7	2583656	2583684	100.0	1257571	Deletion	HGNC:21701	Benign	-
-7	2586653	2586701	100.0	1270093	Insertion	HGNC:21701	Benign	-
-7	5570100	5570122	100.0	1250349	Deletion	HGNC:132	Benign	-
-7	16129085	16129137	3.7	310587	Deletion	HGNC:37276	Uncertain significance	Congenital Muscular Dystrophy, alpha-dystroglycan related
-7	33195317	33195669	28.23	1155696	Insertion	HGNC:30000	Benign	Bardet-Biedl syndrome
-7	45650359	45651091	1.36	1233043	Insertion	HGNC:232	Benign	-
-7	47920136	47920163	100.0	1276967	Deletion	HGNC:18053	Benign	-
-7	81591114	81591143	100.0	662986	Microsatellite	HGNC:1399	Benign	-
-7	81689484	81689506	14.81	1270423	Insertion	HGNC:1399	Benign	-
-7	81689517	81689629	3.42	1270423	Insertion	HGNC:1399	Benign	-
-7	81689517	81689580	5.88	1270423	Insertion	HGNC:1399	Benign	-
-7	94051084	94051122	100.0	1242982	Deletion	HGNC:2198	Benign	-
-7	98550654	98550686	100.0	1256359	Microsatellite	HGNC:12347	Benign	-
-7	117252079	117252103	7.69	917450	Deletion	HGNC:1884	Uncertain significance	-
-7	121943582	121943610	20.0	1212254	Microsatellite	HGNC:22788	Benign	-
-7	128587351	128587381	100.0	699841	Deletion	HGNC:6120	Benign	-
-7	135255619	135255648	100.0	1235101	Duplication	HGNC:18658	Benign	-
-7	150783900	150783924	7.69	269803	Deletion	HGNC:16923	Uncertain significance	-
-7	150783901	150783922	100.0	269803	Deletion	HGNC:16923	Uncertain significance	-
-7	154002103	154002133	25.0	1278798	Microsatellite	HGNC:3010	Benign	-
-7	154002103	154002145	100.0	1278798	Microsatellite	HGNC:3010	Benign	-
+6	35791147	35791167	50.0	307282	Microsatellite	HGNC:21253	Uncertain significance	Nonsyndromic Hearing Loss, Recessive
+6	32450724	32454366	0.0	156938	copy number gain	-	Benign	-
+6	52358163	52358185	16.0	1171600	Insertion	HGNC:16406	Benign	-
+6	18155353	18155387	0.0	306954	Deletion	HGNC:12014	Uncertain significance	Thiopurine methyltransferase deficiency
 7	157414064	157414129	100.0	710898	Insertion	HGNC:9677	Benign	-
-8	10467637	10467685	43.08	1262512	Insertion	HGNC:15946	Benign	-
-8	17924612	17924642	100.0	1212547	Deletion	HGNC:735	Benign	-
-8	17924613	17924634	0.0	1212547	Deletion	HGNC:735	Benign	-
-8	21988467	21988491	100.0	304863	Microsatellite	HGNC:5172	Uncertain significance	Atrichia with papular lesions;Alopecia universalis
-8	74888284	74888306	8.33	1239172	Microsatellite	HGNC:26050	Benign	-
-8	74888284	74888317	5.71	1239172	Microsatellite	HGNC:26050	Benign	-
-8	141445349	141445370	100.0	1155857	Microsatellite	HGNC:30832	Benign	-
-8	144295463	144295520	100.0	1231285	Deletion	HGNC:24945	Benign	-
-8	144295498	144295526	100.0	1248388	Deletion	HGNC:24945	Benign	-
-8	145151665	145151692	100.0	1245372	Deletion	HGNC:2579	Benign	Mitochondrial complex III deficiency, nuclear type 6
+7	154002103	154002145	100.0	1278798	Microsatellite	HGNC:3010	Benign	-
+7	154002103	154002133	25.0	1278798	Microsatellite	HGNC:3010	Benign	-
+7	150783901	150783922	100.0	269803	Deletion	HGNC:16923	Uncertain significance	-
+7	150783900	150783924	7.69	269803	Deletion	HGNC:16923	Uncertain significance	-
+7	135255619	135255648	100.0	1235101	Duplication	HGNC:18658	Benign	-
+7	128587351	128587381	100.0	699841	Deletion	HGNC:6120	Benign	-
+7	117252079	117252103	7.69	917450	Deletion	HGNC:1884	Uncertain significance	-
+7	98550654	98550686	100.0	1256359	Microsatellite	HGNC:12347	Benign	-
+7	94051084	94051122	100.0	1242982	Deletion	HGNC:2198	Benign	-
+7	121943582	121943610	20.0	1212254	Microsatellite	HGNC:22788	Benign	-
+7	81689517	81689629	3.42	1270423	Insertion	HGNC:1399	Benign	-
+7	81689484	81689506	14.81	1270423	Insertion	HGNC:1399	Benign	-
+7	81591114	81591143	100.0	662986	Microsatellite	HGNC:1399	Benign	-
+7	47920136	47920163	100.0	1276967	Deletion	HGNC:18053	Benign	-
+7	45650359	45651091	1.36	1233043	Insertion	HGNC:232	Benign	-
+7	33195317	33195669	28.23	1155696	Insertion	HGNC:30000	Benign	Bardet-Biedl syndrome
+7	16129085	16129137	3.7	310587	Deletion	HGNC:37276	Uncertain significance	Congenital Muscular Dystrophy, alpha-dystroglycan related
+7	5570100	5570122	100.0	1250349	Deletion	HGNC:132	Benign	-
+7	2586653	2586701	100.0	1270093	Insertion	HGNC:21701	Benign	-
+7	2583656	2583684	100.0	1257571	Deletion	HGNC:21701	Benign	-
+7	286502	286536	100.0	1235142	Insertion	HGNC:22140	Benign	-
+7	81689517	81689580	5.88	1270423	Insertion	HGNC:1399	Benign	-
 8	145739100	145739448	3.77	458175	Duplication	HGNC:9949	Uncertain significance	Baller-Gerold syndrome
-9	3932133	3932157	100.0	1276955	Microsatellite	HGNC:28510	Benign	-
+8	145151665	145151692	100.0	1245372	Deletion	HGNC:2579	Benign	Mitochondrial complex III deficiency, nuclear type 6
+8	144295498	144295526	100.0	1248388	Deletion	HGNC:24945	Benign	-
+8	144295463	144295520	100.0	1231285	Deletion	HGNC:24945	Benign	-
+8	74888284	74888317	5.71	1239172	Microsatellite	HGNC:26050	Benign	-
+8	74888284	74888306	8.33	1239172	Microsatellite	HGNC:26050	Benign	-
+8	21988467	21988491	100.0	304863	Microsatellite	HGNC:5172	Uncertain significance	Atrichia with papular lesions;Alopecia universalis
+8	17924613	17924634	0.0	1212547	Deletion	HGNC:735	Benign	-
+8	17924612	17924642	100.0	1212547	Deletion	HGNC:735	Benign	-
+8	10467637	10467685	43.08	1262512	Insertion	HGNC:15946	Benign	-
+8	141445349	141445370	100.0	1155857	Microsatellite	HGNC:30832	Benign	-
+9	140847103	140847143	100.0	1264338	Microsatellite	HGNC:1389	Benign	-
+9	140773610	140777194	3.39	1037920	Insertion	HGNC:1389	Likely pathogenic	-
+9	140693540	140693579	100.0	1282715	Insertion	HGNC:24650	Benign	-
+9	140050831	140050870	100.0	664487	Deletion	HGNC:4584	Benign	-
+9	140039980	140040039	100.0	663699	Deletion	HGNC:4584	Benign	-
+9	138660966	138661006	100.0	664332	Deletion	HGNC:18865	Benign	-
+9	138657195	138657215	100.0	664106	Microsatellite	HGNC:18865	Benign	-
+9	137690415	137690499	100.0	1243503	Deletion	HGNC:2209	Benign	-
+9	136637177	136637208	100.0	777727	Insertion	HGNC:12658	Benign	-
+9	136223221	136223242	22.22	1220407	Microsatellite	HGNC:11474	Benign	-
+9	137688780	137688800	100.0	1236275	Deletion	HGNC:2209	Benign	-
 9	8331574	8331595	91.67	229711	Insertion	HGNC:9668	Benign	-
 9	32986032	32986053	0.0	777740	Deletion	HGNC:15984	Benign	-
-9	36216324	36216350	73.91	318628	Microsatellite	HGNC:23657	Uncertain significance	GNE myopathy;Inclusion Body Myopathy, Recessive;Sialuria
+9	3932133	3932157	100.0	1276955	Microsatellite	HGNC:28510	Benign	-
 9	75315641	75315681	50.0	1283806	Microsatellite	HGNC:16513	Benign	-
 9	117849806	117849830	100.0	1277784	Microsatellite	HGNC:5318	Benign	-
+9	36216324	36216350	73.91	318628	Microsatellite	HGNC:23657	Uncertain significance	GNE myopathy;Inclusion Body Myopathy, Recessive;Sialuria
 9	134391120	134391175	100.0	663298	Deletion	HGNC:9202	Benign	-
-9	136223221	136223242	22.22	1220407	Microsatellite	HGNC:11474	Benign	-
-9	136637177	136637208	100.0	777727	Insertion	HGNC:12658	Benign	-
-9	137688780	137688800	100.0	1236275	Deletion	HGNC:2209	Benign	-
-9	137690415	137690499	100.0	1243503	Deletion	HGNC:2209	Benign	-
-9	138657195	138657215	100.0	664106	Microsatellite	HGNC:18865	Benign	-
-9	138660966	138661006	100.0	664332	Deletion	HGNC:18865	Benign	-
-9	140039980	140040039	100.0	663699	Deletion	HGNC:4584	Benign	-
-9	140050831	140050870	100.0	664487	Deletion	HGNC:4584	Benign	-
-9	140693540	140693579	100.0	1282715	Insertion	HGNC:24650	Benign	-
-9	140773610	140777194	3.39	1037920	Insertion	HGNC:1389	Likely pathogenic	-
-9	140847103	140847143	100.0	1264338	Microsatellite	HGNC:1389	Benign	-
-10	310216	310452	0.0	164219	copy number loss	HGNC:29063	Uncertain significance	-
-10	3208567	3208592	100.0	790957	Insertion	HGNC:17663	Uncertain significance	Irido-corneo-trabecular dysgenesis
-10	26315041	26315063	100.0	1233547	Duplication	HGNC:7601	Benign	-
-10	26436160	26436181	100.0	1210822	Microsatellite	HGNC:7601	Benign	-
-10	49633873	49633893	25.0	1266572	Insertion	HGNC:6881	Benign	-
-10	78785000	78785022	8.33	1269349	Deletion	HGNC:6284	Benign	-
-10	94381353	94381373	95.45	1278106	Microsatellite	HGNC:6388	Benign	-
+10	123246732	123246754	100.0	1284083	Deletion	HGNC:3689	Benign	-
+10	108460200	108460226	0.0	154737	copy number gain	HGNC:16697	Benign	-
+10	105797989	105798009	100.0	1284548	Microsatellite	HGNC:2194	Benign	-
 10	102777590	102777612	100.0	1274107	Microsatellite	HGNC:26257	Benign	-
 10	104590836	104590871	100.0	1223111	Deletion	HGNC:2593	Benign	-
-10	105797989	105798009	100.0	1284548	Microsatellite	HGNC:2194	Benign	-
-10	108460200	108460226	0.0	154737	copy number gain	HGNC:16697	Benign	-
-10	123246732	123246754	100.0	1284083	Deletion	HGNC:3689	Benign	-
+10	49633873	49633893	25.0	1266572	Insertion	HGNC:6881	Benign	-
+10	26436160	26436181	100.0	1210822	Microsatellite	HGNC:7601	Benign	-
+10	26315041	26315063	100.0	1233547	Duplication	HGNC:7601	Benign	-
+10	3208567	3208592	100.0	790957	Insertion	HGNC:17663	Uncertain significance	Irido-corneo-trabecular dysgenesis
+10	310216	310452	0.0	164219	copy number loss	HGNC:29063	Uncertain significance	-
+10	78785000	78785022	8.33	1269349	Deletion	HGNC:6284	Benign	-
+10	94381353	94381373	95.45	1278106	Microsatellite	HGNC:6388	Benign	-
 11	207359	207380	100.0	1219264	Duplication	HGNC:19348	Benign	-
 11	2591559	2591595	100.0	665838	Duplication	HGNC:6294	Benign	-
 11	17569965	17569985	100.0	1165028	Deletion	HGNC:8516	Benign	-
 11	17581456	17581477	100.0	1267822	Insertion	HGNC:8516	Benign	-
 11	17634893	17634921	0.0	1286663	Microsatellite	HGNC:8516	Benign	-
 11	22214877	22214901	100.0	319863	Insertion	HGNC:27337	Benign	Miyoshi myopathy;Limb-Girdle Muscular Dystrophy, Recessive;Gnathodiaphyseal dysplasia
-11	31815968	31815988	100.0	1272869	Microsatellite	HGNC:8620	Benign	-
+11	64367081	64367116	0.0	1223160	Deletion	HGNC:17989	Benign	-
 11	32451997	32452017	16.67	1259637	Insertion	HGNC:12796	Benign	-
+11	113230773	113230793	89.36	1242342	Microsatellite	HGNC:23700	Benign	-
+11	88024737	88024771	71.43	1038107	Microsatellite	HGNC:2528	Uncertain significance	-
+11	31815968	31815988	100.0	1272869	Microsatellite	HGNC:8620	Benign	-
+11	71936225	71936253	100.0	1236347	Deletion	HGNC:6080	Benign	-
+11	65308174	65308228	51.35	1244607	Duplication	HGNC:6716	Benign	-
+11	76895770	76895792	100.0	52377	Deletion	HGNC:7606	Benign	Nonsyndromic hearing loss and deafness;Deafness, autosomal recessive 2
+12	133306920	133306983	0.0	1263996	Deletion	HGNC:29101	Benign	-
+12	133295206	133295594	1.02	1229256	Insertion	HGNC:28763	Benign	-
+12	133197449	133197510	100.0	1275523	Deletion	HGNC:15459	Benign	-
+12	133195662	133195694	100.0	1227553	Microsatellite	HGNC:15459	Benign	-
+12	124155337	124155362	100.0	1240687	Duplication	HGNC:25774	Benign	-
+12	53207583	53207625	100.0	702383	Insertion	HGNC:6441	Benign	-
+12	53183951	53183972	100.0	702380	Duplication	HGNC:6440	Benign	-
+12	52096440	52096481	100.0	667107	Deletion	HGNC:10596	Benign	-
+12	50898784	50898814	0.0	16009	Microsatellite	HGNC:29284	Pathogenic	Mental retardation, fra12a type
+12	50480262	50480283	62.5	1235491	Microsatellite	HGNC:11106	Benign	-
+12	41318683	41318705	95.45	1245220	Microsatellite	HGNC:2171	Benign	-
+12	53069222	53069243	100.0	77536	Deletion	HGNC:6412	Benign	-
+12	40692580	40692604	55.56	1262027	Microsatellite	HGNC:18618	Benign	-
+12	25378220	25378246	100.0	1257024	Deletion	HGNC:6407	Benign	-
+12	22016216	22016262	100.0	666443	Deletion	HGNC:60	Benign	-
+12	1006052	1006078	100.0	1285596	Microsatellite	HGNC:14540	Benign	-
+12	21031069	21031092	100.0	1172392	Deletion	HGNC:10961	Benign	-
+12	20968645	20968669	50.0	981776	Deletion	HGNC:10961	Benign	Rotor syndrome
+12	7362204	7362236	100.0	791275	Insertion	HGNC:9719	Benign	Peroxisome biogenesis disorder 1A (Zellweger)
+12	7355820	7356129	0.63	1246837	Deletion	HGNC:9719	Benign	-
+12	7355777	7355825	100.0	1287165	Deletion	HGNC:9719	Benign	-
+12	7343108	7343153	66.67	582852	Duplication	HGNC:9719	Uncertain significance	-
+12	6452811	6452846	100.0	1038170	Insertion	HGNC:11916	Uncertain significance	-
+12	40692662	40692689	100.0	1247290	Microsatellite	HGNC:18618	Benign	-
+13	113771917	113771954	5.13	615744	Deletion	HGNC:3544	Uncertain significance	Factor VII deficiency
+13	111145398	111145428	100.0	1248738	Microsatellite	HGNC:2203	Benign	-
+13	70713512	70713533	0.0	15231	Microsatellite	-	Benign	Spinocerebellar ataxia type 8
+13	20939356	20939376	0.0	247435	Deletion	HGNC:4284	Pathogenic	Deafness, autosomal recessive 1A
+13	32960704	32960735	100.0	259513	Deletion	HGNC:1101	Benign	Breast-ovarian cancer, familial 2
+13	25463709	25463729	100.0	1282808	Deletion	HGNC:17272	Benign	-
+13	25456347	25456395	50.0	1237950	Microsatellite	HGNC:17272	Benign	-
+13	38326212	38326250	0.0	514821	Translocation	HGNC:12336	Uncertain significance	-
+14	105242404	105242441	100.0	1276697	Deletion	HGNC:391	Benign	-
+14	102513978	102514000	23.08	1238673	Insertion	HGNC:2961	Benign	-
+14	92537354	92537381	85.71	1200033	Insertion	HGNC:7106	Benign	-
+14	102964359	102964383	100.0	667346	Duplication	HGNC:19957	Benign	-
+14	92537353	92537374	93.02	1200033	Insertion	HGNC:7106	Benign	-
+14	92537353	92537392	68.85	1200033	Insertion	HGNC:7106	Benign	-
+14	24718379	24718401	100.0	1214795	Microsatellite	HGNC:11777	Benign	-
+14	102511064	102511092	100.0	1212109	Deletion	HGNC:2961	Benign	-
+14	74711602	74711642	4.76	1270059	Microsatellite	HGNC:1975	Benign	-
+14	67632165	67632187	100.0	1228662	Microsatellite	HGNC:15465	Benign	-
+15	101791684	101791711	80.85	1272519	Microsatellite	HGNC:17198	Benign	-
+15	100693174	100693204	12.12	1255972	Insertion	HGNC:17109	Benign	-
+15	100693159	100693198	6.35	1255972	Insertion	HGNC:17109	Benign	-
+15	100693158	100693203	8.33	1255972	Insertion	HGNC:17109	Benign	-
+15	90172419	90172441	100.0	1276996	Deletion	HGNC:30497	Benign	-
+15	72142031	72142055	100.0	1268372	Deletion	HGNC:7608	Benign	-
+15	100649465	100649487	100.0	1247581	Insertion	HGNC:17109	Benign	-
+15	65322165	65322185	70.59	1271417	Microsatellite	HGNC:29666	Benign	-
+15	59497708	59497728	100.0	1237071	Duplication	HGNC:7599	Benign	-
+15	58852849	58852869	100.0	1270936	Deletion	HGNC:6619	Benign	-
+15	53807252	53807334	6.98	322898	Microsatellite	HGNC:26790	Uncertain significance	Amelogenesis Imperfecta, Recessive
+15	40309702	40309722	0.0	1278380	Deletion	HGNC:19687	Benign	-
+15	34150120	34150140	100.0	1157429	Microsatellite	HGNC:10485	Benign	Epileptic encephalopathy
+15	23685922	23685943	100.0	1038314	Insertion	HGNC:26695	Uncertain significance	-
+15	68522105	68522125	100.0	1038347	Duplication	HGNC:2077	Uncertain significance	-
+16	46732095	46732115	76.47	343036	Microsatellite	HGNC:17151	Uncertain significance	Meier-Gorlin syndrome
+16	88798330	88798365	46.1	982051	Insertion	-	Benign	none provided
+16	88798325	88800368	8.24	982051	Insertion	-	Benign	none provided
+16	88779323	88779401	2.5	778341	Deletion	HGNC:28005	Benign	-
+16	88506287	88506314	100.0	342833	Microsatellite	HGNC:23216	Benign	Brittle cornea syndrome 1
+16	81941530	81941553	100.0	1225887	Deletion	HGNC:9066	Benign	-
+16	29725602	29725623	0.0	154997	copy number loss	-	Benign	-
+16	23388895	23388941	4.17	1251072	Deletion	HGNC:10600	Benign	-
+16	23388895	23388918	8.0	1251072	Deletion	HGNC:10600	Benign	-
+16	28507397	28507424	100.0	703605	Microsatellite	HGNC:24087	Benign	-
+16	188303	188335	100.0	1279708	Microsatellite	HGNC:14124	Benign	-
+16	629427	629547	100.0	1275553	Deletion	HGNC:14135	Benign	-
+16	1500329	1500360	100.0	1229937	Duplication	HGNC:2025	Benign	-
+16	1500688	1500926	0.0	1175408	Duplication	HGNC:2025	Benign	Hypopigmentation, organomegaly, and delayed myelination and development;Autosomal recessive osteopetrosis 4;Autosomal dominant osteopetrosis 2
+16	1203321	1203355	100.0	1268538	Microsatellite	HGNC:1395	Benign	-
+17	41223538	41223562	100.0	259558	Insertion	HGNC:1100	Benign	Breast-ovarian cancer, familial 1
+17	1386095	1386173	11.9	1241814	Insertion	HGNC:7597	Benign	-
+17	4802255	4802275	100.0	668891	Deletion	HGNC:1966	Benign	-
+17	6358974	6359335	1.9	1158083	Insertion	HGNC:21043	Benign	-
+17	29662308	29662336	12.5	1278986	Insertion	HGNC:7765	Benign	-
+17	29662315	29662390	4.88	1278986	Insertion	HGNC:7765	Benign	-
+17	29662318	29662363	100.0	1258183	Microsatellite	HGNC:7765	Benign	-
+17	39190973	39191003	100.0	704130	Insertion	HGNC:16771	Benign	-
+17	40270029	40270068	100.0	778488	Deletion	HGNC:4201	Benign	-
+17	40489892	40490192	100.0	1157973	Deletion	HGNC:11364	Benign	Hyper-IgE recurrent infection syndrome 1, autosomal dominant;STAT3 gain of function
+17	4837171	4837210	0.0	976789	Deletion	HGNC:4439	Uncertain significance	Abnormal bleeding;Thrombocytopenia
+17	44223907	44224221	0.0	170820	copy number loss	-	Benign	-
+17	48277059	48277080	100.0	1249223	Microsatellite	HGNC:2197	Benign	-
+17	57168896	57168935	100.0	1239101	Microsatellite	HGNC:7523	Benign	-
+17	71188967	71189069	100.0	1276611	Deletion	HGNC:6545	Benign	-
+17	71188989	71189023	0.0	1276611	Deletion	HGNC:6545	Benign	-
+17	71188989	71189037	0.0	1276611	Deletion	HGNC:6545	Benign	-
+17	73833087	73833113	100.0	1220785	Microsatellite	HGNC:23147	Benign	-
+17	76429996	76430032	100.0	1233650	Deletion	HGNC:2946	Benign	-
+17	76554529	76554551	100.0	1259888	Microsatellite	HGNC:2946	Benign	-
+17	78055186	78055206	91.3	1251281	Microsatellite	HGNC:26090	Benign	-
+17	78064015	78064047	5.88	1262212	Deletion	HGNC:26090	Benign	-
+17	78064216	78064248	100.0	1247986	Microsatellite	HGNC:26090	Benign	-
+17	78971150	78971185	5.41	778559	Deletion	HGNC:25675	Benign	-
+17	45367814	45367834	100.0	1255383	Microsatellite	HGNC:6156	Benign	-
+18	77488698	77488741	100.0	791884	Duplication	HGNC:2498	Benign	Congenital cataracts-facial dysmorphism-neuropathy syndrome
+18	55398540	55398578	100.0	1258263	Microsatellite	HGNC:3706	Benign	-
+18	10731173	10731200	100.0	1283693	Deletion	HGNC:26270	Benign	-
+18	10795314	10795350	100.0	1271557	Deletion	HGNC:26270	Benign	-
+18	31314008	31314034	100.0	1259653	Microsatellite	HGNC:29357	Benign	-
+19	43690009	43690053	0.0	156887	copy number loss	-	Benign	-
+19	55671134	55671171	100.0	1173297	Deletion	HGNC:30492	Benign	-
+19	53116933	53117017	100.0	705225	Deletion	HGNC:13158	Benign	-
+19	50795772	50795818	100.0	1267669	Deletion	HGNC:23212	Benign	-
+19	50752815	50752836	100.0	1212607	Microsatellite	HGNC:23212	Benign	-
+19	46273462	46273507	0.0	961920	Microsatellite	HGNC:2933	Benign	Steinert myotonic dystrophy syndrome
+19	46273462	46273489	0.0	961920	Microsatellite	HGNC:2933	Benign	Steinert myotonic dystrophy syndrome
+19	38993424	38993454	100.0	1253491	Deletion	HGNC:10483	Benign	-
+19	5691987	5692016	100.0	1247078	Duplication	HGNC:9479	Benign	-
+19	14070706	14070726	100.0	778497	Duplication	HGNC:25095	Benign	-
+19	11322234	11322271	100.0	1253599	Microsatellite	HGNC:19189	Benign	-
+19	7595050	7595070	100.0	1253518	Deletion	HGNC:13356	Benign	-
+19	6710430	6710452	100.0	1256649	Deletion	HGNC:1318	Benign	-
+19	5708484	5708581	4.0	1257639	Duplication	HGNC:9479	Benign	-
+19	5131560	5131887	0.61	1087468	Microsatellite	HGNC:29136	Pathogenic	INTELLECTUAL DEVELOPMENTAL DISORDER, AUTOSOMAL DOMINANT 65
+19	4123551	4123577	100.0	1249770	Microsatellite	HGNC:6842	Benign	-
+19	4123543	4123569	7.14	1249770	Microsatellite	HGNC:6842	Benign	-
+19	33349674	33349694	61.76	1285343	Microsatellite	HGNC:11067	Benign	-
+20	61462003	61462252	21.58	1220510	Insertion	HGNC:2219	Benign	-
+20	62561037	62561063	100.0	1220358	Duplication	HGNC:16235	Benign	-
+20	62046769	62046810	66.67	669215	Insertion	HGNC:6296	Benign	-
+20	61991259	61991296	47.37	1286237	Insertion	HGNC:1958	Benign	-
+20	60907982	60908009	44.44	1264816	Microsatellite	HGNC:6485	Benign	-
+20	61991255	61991281	56.52	1286237	Insertion	HGNC:1958	Benign	-
+20	60866882	60866912	100.0	1235725	Microsatellite	HGNC:15761	Benign	-
+20	60866874	60866933	68.13	1235725	Microsatellite	HGNC:15761	Benign	-
+20	33588698	33588720	100.0	778678	Deletion	HGNC:15906	Benign	-
+20	30250848	30250926	100.0	1038761	Microsatellite	HGNC:992	Uncertain significance	-
+20	18535590	18535620	100.0	1269385	Microsatellite	HGNC:10702	Benign	-
+20	2633378	2633402	7.69	131984	Microsatellite	HGNC:15911	Benign	Spinocerebellar ataxia 36
+20	60907982	60908003	53.33	1264816	Microsatellite	HGNC:6485	Benign	-
+21	47754471	47754510	97.5	800183	Insertion	HGNC:16068	Benign	Microcephalic osteodysplastic primordial dwarfism type II
+21	47540039	47540096	3.39	670499	Deletion	HGNC:2212	Benign	-
+21	47410379	47410568	1.05	1210767	Deletion	HGNC:2211	Benign	-
+21	47410353	47410419	20.25	852405	Insertion	HGNC:2211	Uncertain significance	Bethlem myopathy 1
+21	47409912	47409946	100.0	1282705	Microsatellite	HGNC:2211	Benign	-
+21	47407708	47407894	0.0	670663	Deletion	HGNC:2211	Benign	-
+21	46930865	46930923	100.0	1237571	Deletion	HGNC:2195	Benign	-
+21	46930865	46930901	100.0	1237571	Deletion	HGNC:2195	Benign	-
+21	46927370	46927412	100.0	1263991	Deletion	HGNC:2195	Benign	-
+21	47417051	47417114	100.0	670478	Deletion	HGNC:2211	Benign	-
+21	46825202	46825259	9.84	1279628	Insertion	HGNC:2195	Benign	-
+21	46825001	46825034	100.0	1262232	Deletion	HGNC:2195	Benign	-
+21	45815583	45815623	100.0	1277681	Deletion	HGNC:12339	Benign	-
+21	45815567	45815617	0.0	1277681	Deletion	HGNC:12339	Benign	-
+21	44478097	44478128	100.0	669332	Deletion	HGNC:1550	Benign	-
+21	43897120	43897235	100.0	1240133	Deletion	HGNC:12371	Benign	-
+21	43897083	43897116	100.0	1223604	Microsatellite	HGNC:12371	Benign	-
+21	43897065	43897632	0.35	1223604	Microsatellite	HGNC:12371	Benign	-
+21	36042462	36042492	100.0	705666	Deletion	HGNC:2065	Benign	-
+21	46910397	46910482	4.49	1248139	Insertion	HGNC:2195	Benign	-
+22	44642734	44642767	0.0	804707	copy number gain	-	Uncertain significance	-
+22	37268665	37268713	100.0	1273121	Deletion	HGNC:7662	Benign	-
+22	31012012	31012040	100.0	1251917	Microsatellite	HGNC:11653	Benign	-
+22	32899811	32899853	100.0	1038829	Insertion	HGNC:13586	Uncertain significance	-
+22	26317669	26317689	100.0	1268688	Microsatellite	HGNC:18150	Benign	-
+22	24176677	24176700	100.0	1238954	Microsatellite	HGNC:11103	Benign	-
+22	17663666	17663693	100.0	982244	Microsatellite	HGNC:1839	Benign	none provided;Polyarteritis nodosa, childhoood-onset
+22	26879946	26879967	100.0	390411	Microsatellite	HGNC:15844	Benign	-
+X	387376	387872	0.0	673996	copy number gain	-	Uncertain significance	-
+X	878086	879166	0.0	672800	copy number gain	-	Uncertain significance	-
+X	10180877	10180903	20.0	1283137	Duplication	HGNC:2022	Benign	-
+X	30811558	30811636	0.0	608160	copy number loss	-	Benign	-
+X	32470399	32470545	0.0	1265221	Deletion	HGNC:2928	Benign	-
+X	32470410	32470451	100.0	1265221	Deletion	HGNC:2928	Benign	-
+X	34148805	34148844	100.0	706221	Microsatellite	HGNC:29962	Benign	-
+X	41057619	41057684	100.0	1260775	Deletion	HGNC:12632	Benign	-
+X	70352617	70352647	11.76	1210849	Microsatellite	HGNC:11957	Benign	-
+X	77086467	77086487	100.0	1286183	Microsatellite	HGNC:28880	Benign	-
+X	146993599	146993632	21.05	1262260	Microsatellite	HGNC:3775	Benign	-
+X	147582157	147582184	6.9	25565	Microsatellite	HGNC:3776	Pathogenic	FRAXE

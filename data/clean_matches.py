@@ -30,8 +30,13 @@ if __name__ == "__main__":
 
     keep_cols = ["CHROM", "POS", "END", "Type", "ClinicalSignificance", "Similarity",
                  "AlleleID", "PhenotypeList", "HGNC_ID"]
+    chromosomes = [str(i) for i in list(range(1, 23))]
+    chromosomes.extend(["X", "Y"])
     
     df = pd.read_csv(matches, usecols=keep_cols)
+
     df["Similarity"] = df["Similarity"].map(lambda x: round(x, 2))
     df["PhenotypeList"] = df["PhenotypeList"].map(get_phenotypes)
+    df["CHROM"] = pd.Categorical(df["CHROM"], chromosomes)
+    df.sort_values("CHROM", inplace=True)
     df.to_csv(sys.stdout, sep="\t", index=False)

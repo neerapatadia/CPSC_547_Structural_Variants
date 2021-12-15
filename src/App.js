@@ -146,7 +146,7 @@ function App() {
         accessor: "PhenotypeList",
       },
       {
-        Header: "HUGO ID",
+        Header: "Gene",
         accessor: "HGNC_ID",
       },
     ],
@@ -200,7 +200,7 @@ function App() {
         </div>
       </main>
       {tableLoading ? (
-        <p>Loading matches...</p>
+        <p className="text-center">Loading matches...</p>
       ) : (
         <MatchTable columns={columns} data={matchData} />
       )}
