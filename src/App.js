@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import * as d3 from "d3";
 import { range } from "lodash";
 import BarChart from "./components/BarChart";
 import GenomePlots from "./components/GenomePlots";
 import Legend from "./components/Legend";
+import MatchTable from "./components/MatchTable";
+import Select from "react-select";
 import { getDimensions } from "./utils/getDimensions";
 import "./App.css";
 
@@ -13,39 +15,86 @@ import "./App.css";
 // bar charts / hover details = 40% width of main
 // see App.css
 
+// TODO: pick colour for "no match"
+
 const chromosomes = range(1, 23)
   .map((c) => `${c}`)
   .concat(["X", "Y"]);
 
+const chromOptions = [{ value: null, label: "All" }];
+for (const chrom of chromosomes) {
+  chromOptions.push({ value: chrom, label: `Chromosome ${chrom}` });
+}
+
+const pathLevels = [
+  "Uncertain significance",
+  "Benign",
+  "Likely pathogenic",
+  "Pathogenic",
+];
+
+const colourMap = {
+  "Uncertain significance": "#818589",
+  Benign: "#4dac26",
+  "Likely pathogenic": "#eb95df",
+  Pathogenic: "#d01c8b",
+};
+
 function App() {
-  const [clinvarData, setClinvarData] = useState([]);
-  const [matchData, setMatchData] = useState([]);
+  const [clinvarSummary, setClinvarSummary] = useState([]);
+  const [matchSummary, setMatchSummary] = useState([]);
+  const [matchData, setMatchData] = useState(null);
+  const [selectedChrom, setSelectedChrom] = useState(null);
+
+  const [tableLoading, setTableLoading] = useState(true);
+
   const [circosWidth, setCircosWidth] = useState(getDimensions(0.6));
   const [barChartDims, setBarChartDims] = useState({
     wrapperWidth: getDimensions(0.4),
-    wrapperHeight: getDimensions(0.4 * 0.6), // height of bar chart is 0.6 of width
+    wrapperHeight: getDimensions(0.4 * 0.7), // height of bar chart is 0.8 of width
   });
 
-  // fetch clinvar data
+  // fetch clinvar summary
   useEffect(() => {
     const fetchData = async () => {
       const d = await d3.tsv("/data/clinvar_counts_by_chromosome.tsv");
 
       // remove MT chromosome
       const variants = d.filter((v) => chromosomes.includes(v.Chromosome));
-      setClinvarData(variants);
+      setClinvarSummary(variants);
     };
+
     fetchData();
   }, []);
 
-  // fetch match data
+  // fetch match summary
   useEffect(() => {
     const fetchData = async () => {
       const d = await d3.tsv("/data/hg002_matches_counts_by_chromosome.tsv");
-      setMatchData(d);
+      setMatchSummary(d);
     };
+
     fetchData();
   }, []);
+
+  // fetch match details by selected chromosome
+  useEffect(() => {
+    const fetchData = async () => {
+      setTableLoading(true);
+      const d = await d3.tsv("data/allmatched_clean.tsv");
+
+      if (selectedChrom) {
+        const matches = d.filter((v) => v.CHROM === selectedChrom);
+        setMatchData(matches);
+      } else {
+        setMatchData(d);
+      }
+
+      setTableLoading(false);
+    };
+
+    fetchData();
+  }, [selectedChrom]);
 
   // listen for resize events
   useEffect(() => {
@@ -62,33 +111,71 @@ function App() {
     };
 
     window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const pathLevels = [
-    "Uncertain significance",
-    "Benign",
-    "Likely pathogenic",
-    "Pathogenic",
-  ];
+  const columns = useMemo(
+    () => [
+      {
+        Header: "Chr",
+        accessor: "CHROM",
+      },
+      {
+        Header: "Position",
+        accessor: "POS",
+      },
+      {
+        Header: "Type",
+        accessor: "Type",
+      },
+      {
+        Header: "Clinical Significance",
+        accessor: "ClinicalSignificance",
+      },
+      {
+        Header: "Similarity",
+        accessor: "Similarity",
+      },
+      {
+        Header: "Allele ID",
+        accessor: "AlleleID",
+      },
+      {
+        Header: "Associated Phenotypes",
+        accessor: "PhenotypeList",
+      },
+      {
+        Header: "HUGO ID",
+        accessor: "HGNC_ID",
+      },
+    ],
+    []
+  );
 
-  const colourMap = {
-    "Uncertain significance": "#818589",
-    Benign: "#4dac26",
-    "Likely pathogenic": "#eb95df",
-    Pathogenic: "#d01c8b",
+  const handleSelectedChromChange = (e) => {
+    setSelectedChrom(e.value);
   };
 
   return (
     <>
       <h1>Structural Variant Pathogenicity</h1>
 
-      <main className="dashboard">
+      <main className="container dashboard">
         <GenomePlots width={circosWidth} />
         <div className="side">
+          <div className="sidebar-margin-left">
+            <h3 className="legend-title">Select Chromosome</h3>
+            <Select
+              options={chromOptions}
+              defaultValue={{ value: null, label: "All" }}
+              onChange={handleSelectedChromChange}
+            />
+          </div>
           <Legend pathLevels={pathLevels} colourMap={colourMap} />
-          {clinvarData.length > 0 && (
+          {clinvarSummary.length > 0 && (
             <BarChart
-              data={clinvarData}
+              data={clinvarSummary}
               chromosomes={chromosomes}
               pathLevels={pathLevels}
               colourMap={colourMap}
@@ -98,9 +185,9 @@ function App() {
               leftOffset={50}
             />
           )}
-          {matchData.length > 0 && (
+          {matchSummary.length > 0 && (
             <BarChart
-              data={matchData}
+              data={matchSummary}
               chromosomes={chromosomes}
               pathLevels={pathLevels}
               colourMap={colourMap}
@@ -112,6 +199,11 @@ function App() {
           )}
         </div>
       </main>
+      {tableLoading ? (
+        <p>Loading matches...</p>
+      ) : (
+        <MatchTable columns={columns} data={matchData} />
+      )}
     </>
   );
 }

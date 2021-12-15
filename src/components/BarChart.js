@@ -58,7 +58,7 @@ const BarChart = ({
     .map((value) => ({ value, offset: yScale(value) }));
 
   return (
-    <svg width={wrapperWidth} height={wrapperHeight} className="bar-chart">
+    <svg width={wrapperWidth} height={wrapperHeight}>
       {/* chart title */}
       <text
         transform={`translate(${wrapperWidth / 2}, ${margin.top / 2})`}
