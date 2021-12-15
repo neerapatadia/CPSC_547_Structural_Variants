@@ -167,66 +167,61 @@ const GenomePlots = ({ width }) => {
         arrangement: "horizontal",
         views: [
           {
-            tracks: [
-              {
-                data: {
-                  url: "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-                  type: "multivec",
-                  row: "sample",
-                  column: "position",
-                  value: "peak",
-                  categories: ["Uncertain Significance", "Benign", "Likely Pathogenic", "Pathogenic"],
-                  binSize: 4,
-                },
-                mark: "bar",
-                x: {
-                  field: "start",
-                  type: "genomic",
-                  linkingId: "detail-1",
-                  domain: { chromosome: "5" },
-                },
-                xe: { field: "end", type: "genomic" },
-                y: { field: "peak", type: "quantitative" },
-                row: { field: "sample", type: "nominal" },
-                color: { field: "sample", type: "nominal" },
-                stroke: { value: "black" },
-                strokeWidth: { value: 0.3 },
-                style: { background: "blue" },
-                width: width / 2,
-                height: 150,
+           "tracks": [
+            {
+              "width": width,
+              "height": 60,
+              "data": {
+                "url": "https://raw.githubusercontent.com/neerapatadia/CPSC_547_Structural_Variants/main/data/allmatched_clean.tsv?token=ANMJ5YX7E2GENYCI23N5S73BYKYF2",
+                "type": "csv",
+                "separator": "\t",
+                "chromosomeField": "CHROM",
+                "genomicFields": ["POS", "END"],
               },
-            ],
-          },
-          {
-            tracks: [
-              {
-                data: {
-                  url: "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-                  type: "multivec",
-                  row: "sample",
-                  column: "position",
-                  value: "peak",
-                  categories: ["Uncertain Significance", "Benign", "Likely Pathogenic", "Pathogenic"],
-                  binSize: 4,
-                },
-                mark: "bar",
-                x: {
-                  field: "start",
-                  type: "genomic",
-                  domain: { chromosome: "16" },
-                  linkingId: "detail-2",
-                },
-                xe: { field: "end", type: "genomic" },
-                y: { field: "peak", type: "quantitative" },
-                row: { field: "sample", type: "nominal" },
-                color: { field: "sample", type: "nominal", legend: true },
-                stroke: { value: "black" },
-                strokeWidth: { value: 0.3 },
-                style: { background: "red" },
-                width: width / 2,
-                height: 150,
+              "mark": "rect",
+              "color": {
+                "field": "ClinicalSignificance",
+                "type": "nominal",
+                "domain": [
+        					"Uncertain significance",
+        					"Benign",
+        					"Likely pathogenic",
+        					"Pathogenic"
+        						  ],
+                "range": [
+        					"#818589",
+        					"#4DAC26",
+        					"#EB95DF",
+        					"#D01C8B"
+                ]
               },
-            ],
+
+              "x": {
+                "field": "POS",
+                "type": "genomic",
+                "axis": "bottom"
+              },
+              "xe": {"field": "END", "type": "genomic"},
+
+              "size": {"value": 70},
+              "stroke": {"field": "ClinicalSignificance","domain": [
+					"Uncertain significance",
+					"Benign",
+					"Likely pathogenic",
+					"Pathogenic"
+						  ],
+              "range": [
+					"#818589",
+					"#4DAC26",
+					"#EB95DF",
+					"#D01C8B"
+						  ],
+              "type": "nominal"},
+              "strokeWidth": {"value": 10},
+              "style": {"outline": "black"},
+              "background" : "blue"
+            }
+          ]
           },
         ],
         style: { backgroundOpacity: 0.1 },
