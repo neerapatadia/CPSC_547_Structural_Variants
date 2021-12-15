@@ -2,12 +2,12 @@ import React from "react";
 
 const Legend = ({ pathLevels, colourMap }) => {
   return (
-    <>
-      <h3 className="legend-title">Clinical Significance</h3>
-      <div className="legend">
+    <div>
+      <h2 className="legend-title text-center">Clinical Significance</h2>
+      <div className="legend-colours sidebar-margin-left">
         {pathLevels.map((l) => {
           return (
-            <div className="legend-element">
+            <div className="legend-element" key={l}>
               <div
                 style={{ background: colourMap[l] }}
                 className="legend-bubble"
@@ -17,7 +17,7 @@ const Legend = ({ pathLevels, colourMap }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

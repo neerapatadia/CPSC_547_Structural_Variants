@@ -1,10 +1,18 @@
 import React from "react";
-import { range } from "lodash";
 import * as d3 from "d3";
 import BarChartXAxis from "./BarChartXAxis";
 import BarChartYAxis from "./BarChartYAxis";
 
-const BarChart = ({ data, wrapperWidth, wrapperHeight, title, pathLevels, colourMap, leftOffset }) => {
+const BarChart = ({
+  data,
+  chromosomes,
+  wrapperWidth,
+  wrapperHeight,
+  title,
+  pathLevels,
+  colourMap,
+  leftOffset,
+}) => {
   // sizing
   const margin = {
     top: 25,
@@ -14,11 +22,6 @@ const BarChart = ({ data, wrapperWidth, wrapperHeight, title, pathLevels, colour
   };
   const boundsWidth = wrapperWidth - margin.left - margin.right;
   const boundsHeight = wrapperHeight - margin.top - margin.bottom;
-
-  // order chromosomes
-  const chromosomes = range(1, 23)
-    .map((c) => `${c}`)
-    .concat(["X", "Y", "MT"]);
 
   // get total # variants per chromosome
   const chromosomeTotals = data.map(
@@ -59,7 +62,7 @@ const BarChart = ({ data, wrapperWidth, wrapperHeight, title, pathLevels, colour
       {/* chart title */}
       <text
         transform={`translate(${wrapperWidth / 2}, ${margin.top / 2})`}
-        style={{ textAnchor: "middle", fontWeight: "500", fontSize: "1.5rem" }}
+        className="chart-title"
       >
         {title}
       </text>

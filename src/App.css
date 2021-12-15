@@ -3,12 +3,15 @@ h1 {
   margin: 1em 0;
 }
 
+.container {
+  width: 90%;
+  max-width: 1400px;
+}
+
 .dashboard {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1400px;
 }
 
 .side {

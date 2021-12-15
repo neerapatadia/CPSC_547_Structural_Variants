@@ -6,12 +6,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.side > * {
+  margin-bottom: 1.5em;
+}
+
+.sidebar-margin-left {
+  margin-left: 3.125em;
+}
+
+/* d3 bar chart styles */
+
 text {
   text-anchor: middle;
 }
 
 .text-anchor-start {
   text-anchor: start;
+}
+
+.chart-title {
+  text-anchor: middle;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .axis-tick-text {
@@ -27,16 +47,18 @@ text {
   transform: translate(42px, 4px);
 }
 
-.legend {
+/* legend styles */
+
+.legend-colours {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2em;
 }
 
 .legend-title {
-  font-size: 1em;
-  text-align: center;
+  margin-top: 1em;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .legend-element {
@@ -54,4 +76,95 @@ text {
   width: 0.75em;
   height: 0.75em;
   border-radius: 50%;
+}
+
+/* table styles */
+.match-table-container {
+  margin-top: 2em;
+}
+
+.match-table-container h2 {
+  font-size: 2rem;
+}
+
+.match-table {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.match-table th {
+  background-color: #e8e8e8;
+  padding: 0.5em;
+}
+
+.match-table th:not(:last-child) {
+  border-right: 2px solid #fbfbfb;
+}
+
+.match-table tbody tr td {
+  padding: 0.5em;
+}
+
+.match-table tbody tr:not(:last-child) {
+  border-bottom: 2px solid #e4e4e4;
+}
+
+.match-table tbody tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.match-table tbody tr td:not(:last-child) {
+  border-right: 2px solid #e4e4e4;
+}
+
+.match-table-controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2em;
+}
+
+.match-table-controls > :not(:last-child) {
+  margin-right: 0.5em;
+}
+
+.match-table-button {
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+}
+
+.match-table-jump-to {
+  border-left: 1px solid #c5c5c5;
+  padding-left: 0.5em;
+}
+
+.match-table-controls input {
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  padding: 0.5em;
+}
+
+.match-table th:nth-child(1),
+.match-table th:nth-child(5) {
+  width: 8%;
+  min-width: 4em;
+}
+
+.match-table th:nth-child(2),
+.match-table th:nth-child(3),
+.match-table th:nth-child(6),
+.match-table th:nth-child(8) {
+  width: 10%;
+  min-width: 5em;
+}
+
+.match-table th:nth-child(4) {
+  width: 20%;
+  min-width: 10em;
+}
+
+.match-table th:nth-child(7) {
+  width: 25%;
+  min-width: 12.5em;
 }
