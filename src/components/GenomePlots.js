@@ -169,62 +169,51 @@ const GenomePlots = ({ width }) => {
           {
             tracks: [
               {
-                data: {
-                  url: "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-                  type: "multivec",
-                  row: "sample",
-                  column: "position",
-                  value: "peak",
-                  categories: ["Uncertain Significance", "Benign", "Likely Pathogenic", "Pathogenic"],
-                  binSize: 4,
+                    "data": {
+                  "url": "https://raw.githubusercontent.com/armtsf/tmp/main/allmatches.vcf",
+                  "type": "csv",
+                  "row": "ClinicalSignificance",
+                  "column": "Start",
+                  "value": "Similarity",
+                  "categories": ["Uncertain significance",
+                                  "Benign",
+                                  "Likely pathogenic",
+                                  "Pathogenic"],
+                  "binSize": 4,
+
                 },
-                mark: "bar",
-                x: {
-                  field: "start",
-                  type: "genomic",
-                  linkingId: "detail-1",
-                  domain: { chromosome: "5" },
+                "mark": "bar",
+                "x": {
+                  "field": "POS",
+                  "type": "genomic",
+                  "axis": "bottom",
+                  "linkingId": "detail-1"
                 },
-                xe: { field: "end", type: "genomic" },
-                y: { field: "peak", type: "quantitative" },
-                row: { field: "sample", type: "nominal" },
-                color: { field: "sample", type: "nominal" },
-                stroke: { value: "black" },
-                strokeWidth: { value: 0.3 },
-                style: { background: "blue" },
-                width: width / 2,
-                height: 150,
-              },
-            ],
-          },
-          {
-            tracks: [
-              {
-                data: {
-                  url: "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-                  type: "multivec",
-                  row: "sample",
-                  column: "position",
-                  value: "peak",
-                  categories: ["Uncertain Significance", "Benign", "Likely Pathogenic", "Pathogenic"],
-                  binSize: 4,
-                },
-                mark: "bar",
-                x: {
-                  field: "start",
-                  type: "genomic",
-                  domain: { chromosome: "16" },
-                  linkingId: "detail-2",
-                },
-                xe: { field: "end", type: "genomic" },
-                y: { field: "peak", type: "quantitative" },
-                row: { field: "sample", type: "nominal" },
-                color: { field: "sample", type: "nominal", legend: true },
-                stroke: { value: "black" },
-                strokeWidth: { value: 0.3 },
-                style: { background: "red" },
-                width: width / 2,
-                height: 150,
+                "xe": { "field": "END", "type": "genomic" },
+                "y": { "field": "Similarity", "type": "quantitative"},
+                "row": { "field": "ClinicalSignificance", "type": "nominal" },
+                "color": {
+    						  "field": "ClinicalSignificance",
+    						  "type": "nominal",
+                  "domain": [
+        					  "Uncertain significance",
+        					  "Benign",
+        					  "Likely pathogenic",
+        					  "Pathogenic"
+        					],
+                  "range": [
+          					  "#818589",
+          					  "#4dac26",
+          					  "#eb95df",
+          					  "#d01c8b"
+          					],
+                  "legend": true	},
+
+                "stroke": { "value": "black" },
+                "strokeWidth": { "value": 0.3 },
+                "style": { "background": "grey" },
+                "width": width*1.2,
+                "height": 110,
               },
             ],
           },
