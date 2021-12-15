@@ -1,13 +1,7 @@
 import React from "react";
 
 const Legend = ({ colourMap }) => {
-  const categories = [
-    "No match",
-    "Uncertain significance",
-    "Benign",
-    "Likely pathogenic",
-    "Pathogenic",
-  ];
+  const categories = Object.keys(colourMap);
 
   return (
     <div>

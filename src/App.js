@@ -34,7 +34,7 @@ const pathLevels = [
 ];
 
 const colourMap = {
-  "No match": "#818589",
+  "All variants": "#818589",
   "Uncertain significance": "#0092D0",
   Benign: "#4dac26",
   "Likely pathogenic": "#eb95df",
