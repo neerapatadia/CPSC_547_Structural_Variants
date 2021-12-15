@@ -11,47 +11,8 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
         {
           static: true,
           layout: "circular",
-          centerRadius: 0.3,
+          centerRadius: 0.5,
           tracks: [
-            //Deletions
-            {
-              alignment: "overlay",
-              data: {
-                url: "https://raw.githubusercontent.com/armtsf/tmp/main/allmatches.vcf",
-                type: "csv",
-                chromosomeField: "CHROM",
-                genomicFields: ["POS", "END"],
-              },
-              dataTransform: [
-                { type: "filter", field: "Type", oneOf: ["Deletion"] },
-              ],
-              color: {
-                field: "ClinicalSignificance",
-                type: "nominal",
-                domain: pathLevels,
-                range: pathLevels.map((l) => colourMap[l]),
-              },
-              x: { field: "POS", type: "genomic" },
-              xe: { field: "END", type: "genomic" },
-              stroke: {
-                field: "ClinicalSignificance",
-                type: "nominal",
-                domain: pathLevels,
-                range: pathLevels.map((l) => colourMap[l]),
-              },
-              strokeWidth: { value: 0.1 },
-              width,
-              height: 10,
-              tracks: [
-                { mark: "rect" },
-                {
-                  mark: "brush",
-                  x: { linkingId: "detail" },
-                  color: { value: "steelBlue" },
-                },
-              ],
-            },
-
             //All events
             {
               alignment: "overlay",
@@ -74,7 +35,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
               stroke: { value: colourMap["No match"] },
               strokeWidth: { value: 0.1 },
               width,
-              height: 30,
+              height: 10,
               tracks: [
                 { mark: "rect" },
                 {
@@ -92,8 +53,9 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                 //Events
                 {
                   data: {
-                    url: "https://raw.githubusercontent.com/armtsf/tmp/main/allmatches.vcf",
+                    url: "https://raw.githubusercontent.com/neerapatadia/CPSC_547_Structural_Variants/main/data/allmatched_clean.tsv?token=ANMJ5YX7E2GENYCI23N5S73BYKYF2",
                     type: "csv",
+                    separator: "\t",
                     chromosomeField: "CHROM",
                     genomicFields: ["POS", "END"],
                   },
@@ -101,7 +63,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                     {
                       type: "filter",
                       field: "Type",
-                      oneOf: ["Insertion", "Translocation"],
+                      oneOf: ["Insertion", "Deletion", "Translocation"],
                     },
                   ],
                   mark: "rect",
@@ -112,7 +74,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                     range: pathLevels.map((l) => colourMap[l]),
                   },
                   x: { field: "POS", type: "genomic" },
-                  xe: { field: "END", type: "genomic" },
+                  // xe: { field: "END", type: "genomic" },
                   stroke: { value: "lightgray" },
                   strokeWidth: { value: 0.1 },
                   tracks: [
@@ -204,6 +166,11 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
               tooltip: [
                 { field: "POS", type: "genomic", alt: "Start Position" },
                 { field: "END", type: "genomic", alt: "End Position" },
+                {
+                  field: "Type",
+                  type: "nominal",
+                  alt: "SV Type",
+                },
                 {
                   field: "ClinicalSignificance",
                   type: "nominal",
