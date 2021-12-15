@@ -167,55 +167,61 @@ const GenomePlots = ({ width }) => {
         arrangement: "horizontal",
         views: [
           {
-            tracks: [
-              {
-                    "data": {
-                  "url": "https://raw.githubusercontent.com/armtsf/tmp/main/allmatches.vcf",
-                  "type": "csv",
-                  "row": "ClinicalSignificance",
-                  "column": "Start",
-                  "value": "Similarity",
-                  "categories": ["Uncertain significance",
-                                  "Benign",
-                                  "Likely pathogenic",
-                                  "Pathogenic"],
-                  "binSize": 4,
-
-                },
-                "mark": "bar",
-                "x": {
-                  "field": "POS",
-                  "type": "genomic",
-                  "axis": "bottom",
-                  "linkingId": "detail-1"
-                },
-                "xe": { "field": "END", "type": "genomic" },
-                "y": { "field": "Similarity", "type": "quantitative"},
-                "row": { "field": "ClinicalSignificance", "type": "nominal" },
-                "color": {
-    						  "field": "ClinicalSignificance",
-    						  "type": "nominal",
-                  "domain": [
-        					  "Uncertain significance",
-        					  "Benign",
-        					  "Likely pathogenic",
-        					  "Pathogenic"
-        					],
-                  "range": [
-          					  "#818589",
-          					  "#4dac26",
-          					  "#eb95df",
-          					  "#d01c8b"
-          					],
-                  "legend": true	},
-
-                "stroke": { "value": "black" },
-                "strokeWidth": { "value": 0.3 },
-                "style": { "background": "grey" },
-                "width": width*1.2,
-                "height": 110,
+           "tracks": [
+            {
+              "width": width,
+              "height": 60,
+              "data": {
+                "url": "https://raw.githubusercontent.com/neerapatadia/CPSC_547_Structural_Variants/main/data/allmatched_clean.tsv?token=ANMJ5YX7E2GENYCI23N5S73BYKYF2",
+                "type": "csv",
+                "separator": "\t",
+                "chromosomeField": "CHROM",
+                "genomicFields": ["POS", "END"],
               },
-            ],
+              "mark": "rect",
+              "color": {
+                "field": "ClinicalSignificance",
+                "type": "nominal",
+                "domain": [
+        					"Uncertain significance",
+        					"Benign",
+        					"Likely pathogenic",
+        					"Pathogenic"
+        						  ],
+                "range": [
+        					"#818589",
+        					"#4DAC26",
+        					"#EB95DF",
+        					"#D01C8B"
+                ]
+              },
+
+              "x": {
+                "field": "POS",
+                "type": "genomic",
+                "axis": "bottom"
+              },
+              "xe": {"field": "END", "type": "genomic"},
+
+              "size": {"value": 70},
+              "stroke": {"field": "ClinicalSignificance","domain": [
+					"Uncertain significance",
+					"Benign",
+					"Likely pathogenic",
+					"Pathogenic"
+						  ],
+              "range": [
+					"#818589",
+					"#4DAC26",
+					"#EB95DF",
+					"#D01C8B"
+						  ],
+              "type": "nominal"},
+              "strokeWidth": {"value": 10},
+              "style": {"outline": "black"},
+              "background" : "blue"
+            }
+          ]
           },
         ],
         style: { backgroundOpacity: 0.1 },
