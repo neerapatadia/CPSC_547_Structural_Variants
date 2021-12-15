@@ -10,112 +10,153 @@ const GenomePlots = ({ width }) => {
         static: true,
         layout: "circular",
         alignment: "stack",
+		"static": true,
+  		"spacing": 1,
+  		"centerRadius": 0.3,
+		"assembly": "hg19",
 		"tracks": [
+			//Deletions
 			{
+						"data": {
+						  "url": "https://raw.githubusercontent.com/armtsf/tmp/main/allmatched.csv",
+						  "type": "csv",
+						  "chromosomeField": "CHROM",
+						  "genomicFields": ["POS", "END"]
+						},
+						"dataTransform": [{ "type": "filter", "field": "SVTYPE", "oneOf": ["Deletion"] }],
+						"mark": "rect",
+						"color": {
+						  "field": "ClinicalSignificance",
+						  "type": "nominal",
+						  "domain": [
+					"Uncertain significance",
+					"Benign",
+					"Likely pathogenic",
+					"Pathogenic"
+						  ],
+						  "range": [
+					"#818589",
+					"#4DAC26",
+					"#EB95DF",
+					"#D01C8B"
+						  ]
+						},
+						"x": {"field": "POS", "type": "genomic"},
+				// "xe": {"field": "END", "type": "genomic"},
+						"stroke": {"value": "lightgray"},
+						"strokeWidth": {"value": 0.1},
+						"width": 700,
+						"height": 10
+					},
+		
+			//All events
+			{
+			  "style": {"background": "lightgray", "backgroundOpacity": 0.2},
 			  "data": {
-				"url": "https://raw.githubusercontent.com/armtsf/tmp/main/matches-copy.csv",
-				"type": "csv",
-				"separator": "\t",
-				"chromosomeField": "CHROM",
-				"genomicFields": ["POS"]
-			  },
-			  "mark": "rect",
-			  "color": {
-				"field": "Type",
-				"type": "nominal",
-				"domain": [
-				  "Insertion",
-				  "Deletion"
-				],
-				"range": [
-				  "black",
-				  "red"
-				]
-			  },
-			  "x": {"field": "POS", "type": "genomic"},
-			  // "xe": {"field": "p1e", "type": "genomic"},
-			  "stroke": {"value": "lightgray"},
-			  "strokeWidth": {"value": 0.5},
-			  "width": 700,
-			  "height": 30
+						"url": "https://raw.githubusercontent.com/armtsf/tmp/main/all_hg.csv",
+						"type": "csv",
+						"chromosomeField": "CHROM",
+						"genomicFields": ["POS", "END"]
+					  },
+					  "mark": "rect",
+				"color": {
+						  "field": "TYPE",
+						  "type": "nominal",
+						  "domain": [
+							  "DEL",
+							  "INS"
+						  ],
+						  "range": [
+						  "#BDBDBD",
+					"#636363"
+						  ]
+						},
+					  "x": {"field": "POS", "type": "genomic"},
+				// "xe": {"field": "END", "type": "genomic"},
+					  "stroke": {"value": "gray"},
+					  "strokeWidth": {"value": 0.1},
+					  "width": 700,
+					  "height": 30
 			},
+		
+			//Insertions and Translocations
 			{
-			  "data": {
-				"url": "https://raw.githubusercontent.com/armtsf/tmp/main/matches-copy.csv",
-				"type": "csv",
-				"separator": "\t",
-				"chromosomeField": "CHROM",
-				"genomicFields": ["POS"]
-			  },
-			  "mark": "rect",
-			  "color": {
-				"field": "ClinicalSignificance",
-				"type": "nominal",
-				"domain": [
-				  "Benign",
-				  "Uncertain significance",
-				  "Pathogenic",
-				  "Likely pathogenic"
-				],
-				"range": [
-				  "green",
-				  "blue",
-				  "yellow",
-				  "red"
-				]
-			  },
-			  "x": {"field": "POS", "type": "genomic"},
-			  // "xe": {"field": "p1e", "type": "genomic"},
-			  "stroke": {"value": "lightgray"},
-			  "strokeWidth": {"value": 0.5},
-			  "width": 700,
-			  "height": 30
-			},
-			{
+			  "alignment": "overlay",
+			  "tracks":[
+				//Events
+				{
 				  "data": {
-					"type": "csv",
-					"url": "https://raw.githubusercontent.com/armtsf/tmp/main/matched-new.csv",
-					"separator": "\t",
-					"genomicFieldsToConvert": [
-					  {"chromosomeField": "chr1", "genomicFields": ["p1s", "p1e"]},
-					  {"chromosomeField": "chr2", "genomicFields": ["p2s", "p2e"]}
-					]
-				  },
-				  // "dataTransform": [
-				  //   {
-				  //     "type": "filter",
-				  //     "field": "chr1",
-				  //     "oneOf": ["1", "16", "14", "9", "6", "5", "3"]
-				  //   },
-				  //   {
-				  //     "type": "filter",
-				  //     "field": "chr2",
-				  //     "oneOf": ["1", "16", "14", "9", "6", "5", "3"]
-				  //   }
-				  // ],
-				  "mark": "withinLink",
-				  "x": {"field": "p1s", "type": "genomic"},
-				  "xe": {"field": "p1e", "type": "genomic"},
-				  "x1": {"field": "p2s", "type": "genomic"},
-				  "x1e": {"field": "p2e", "type": "genomic"},
-				  "stroke": {
-					"field": "type",
+						  "url": "https://raw.githubusercontent.com/armtsf/tmp/main/allmatched.csv",
+						  "type": "csv",
+						  "chromosomeField": "CHROM",
+						  "genomicFields": ["POS", "END"]
+						},
+						"dataTransform": [{ "type": "filter", "field": "SVTYPE", "oneOf": ["Deletion"], "not": true }],
+						"mark": "rect",
+						"color": {
+						  "field": "ClinicalSignificance",
+						  "type": "nominal",
+						  "domain": [
+					"Uncertain significance",
+					"Benign",
+					"Likely pathogenic",
+					"Pathogenic"
+						  ],
+						  "range": [
+					"#818589",
+					"#4dac26",
+					"#eb95df",
+					"#d01c8b"
+						  ]
+						},
+						"x": {"field": "POS", "type": "genomic"},
+				// "xe": {"field": "END", "type": "genomic"},
+						"stroke": {"value": "lightgray"},
+						"strokeWidth": {"value": 1}
+					},
+		
+			  //Links
+			  {
+				"data": {
+							"type": "csv",
+							"url": "https://raw.githubusercontent.com/armtsf/tmp/main/allmatched.csv",
+							"genomicFieldsToConvert": [
+							  {"chromosomeField": "CHROM", "genomicFields": ["POS", "END"]},
+							  {"chromosomeField": "Chromosome", "genomicFields": ["Start", "Stop"]}
+							]
+						  },
+		    "dataTransform": [{ "type": "filter", "field": "Type", "oneOf": ["Deletion", "Insertion"], "not": true }],
+						  "mark": "withinLink",
+						  "x": {"field": "POS", "type": "genomic"},
+						  // "xe": {"field": "END", "type": "genomic"},
+						  // "x1": {"field": "Start", "type": "genomic"},
+						  "xe": {"field": "Stop", "type": "genomic"},
+						  "stroke": {
+					"field": "ClinicalSignificance",
 					"type": "nominal",
 					"domain": [
-					  "Deletion",
-					  "Inversion",
-					  "Translocation",
-					  "tandem-duplication",
-					  "Insertion"
+					  "Uncertain significance",
+					  "Benign",
+					  "Likely pathogenic",
+					  "Pathogenic"
+					],
+					"range": [
+					  "#818589",
+					  "#4dac26",
+					  "#eb95df",
+					  "#d01c8b"
 					]
-				  },
-				  "strokeWidth": {"value": 0.8},
-				  "opacity": {"value": 0.15},
-				  "width": 500,
-				  "height": 100
-		  }
-		  ],
+						  },
+						  "strokeWidth": {"value": 1}
+			  }
+			  ],
+			  "width": 700,
+			  "height": 30
+			}
+		  ]
       },
+
+
       {
         spacing: 10,
         arrangement: "horizontal",
