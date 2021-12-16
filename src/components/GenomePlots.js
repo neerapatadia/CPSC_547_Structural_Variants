@@ -1,7 +1,13 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import { GoslingComponent, validateGoslingSpec } from "gosling.js";
 
-const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
+const GenomePlots = ({
+  width,
+  selectedChrom,
+  pathLevels,
+  colourMap,
+  selectedLevels,
+}) => {
   const gosRef = useRef(null);
 
   const spec = useMemo(
@@ -46,7 +52,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
               ],
             },
 
-            //Insertions and Translocations
+            //Insertions and deletions
             {
               alignment: "overlay",
               tracks: [
@@ -62,8 +68,8 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                   dataTransform: [
                     {
                       type: "filter",
-                      field: "SVTYPE",
-                      // oneOf: ["Insertion", "Deletion", "Translocation"],
+                      field: "ClinicalSignificance",
+                      oneOf: selectedLevels,
                     },
                   ],
                   mark: "rect",
@@ -105,6 +111,13 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                       },
                     ],
                   },
+                  dataTransform: [
+                    {
+                      type: "filter",
+                      field: "ClinicalSignificance",
+                      oneOf: selectedLevels,
+                    },
+                  ],
                   mark: "withinLink",
                   x: { field: "p1s", type: "genomic" },
                   xe: { field: "p1e", type: "genomic" },
@@ -138,6 +151,13 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                 chromosomeField: "CHROM",
                 genomicFields: ["POS", "END"],
               },
+              dataTransform: [
+                {
+                  type: "filter",
+                  field: "ClinicalSignificance",
+                  oneOf: selectedLevels,
+                },
+              ],
               mark: "rect",
               x: {
                 field: "POS",
@@ -162,7 +182,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
               },
               strokeWidth: { value: 3 },
               width,
-              height: 60,
+              height: 100,
               tooltip: [
                 { field: "POS", type: "genomic", alt: "Start Position" },
                 { field: "END", type: "genomic", alt: "End Position" },
@@ -187,7 +207,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
         },
       ],
     }),
-    [width, colourMap, pathLevels]
+    [width, colourMap, pathLevels, selectedLevels]
   );
 
   useEffect(() => {

@@ -5,7 +5,7 @@ const Legend = ({ colourMap }) => {
 
   return (
     <div>
-      <h2 className="legend-title text-center">Clinical Significance</h2>
+      <h3 className="text-center">Clinical Significance</h3>
       <div className="legend-colours sidebar-margin-left">
         {categories.map((l) => {
           return (

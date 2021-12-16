@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import * as d3 from "d3";
-import { range } from "lodash";
+import { range, indexOf, sortBy } from "lodash";
 import BarChart from "./components/BarChart";
 import GenomePlots from "./components/GenomePlots";
 import Legend from "./components/Legend";
@@ -14,6 +14,8 @@ import "./App.css";
 // circos / linear track = 60% width of main
 // bar charts / hover details = 40% width of main
 // see App.css
+
+// TODO: allow sorting table
 
 const chromosomes = range(1, 23)
   .map((c) => `${c}`)
@@ -44,13 +46,14 @@ function App() {
   const [matchSummary, setMatchSummary] = useState([]);
   const [matchData, setMatchData] = useState(null);
   const [selectedChrom, setSelectedChrom] = useState(null);
+  const [selectedLevels, setSelectedLevels] = useState(pathLevels);
 
   const [tableLoading, setTableLoading] = useState(true);
 
   const [circosWidth, setCircosWidth] = useState(getDimensions(0.6));
   const [barChartDims, setBarChartDims] = useState({
     wrapperWidth: getDimensions(0.4),
-    wrapperHeight: getDimensions(0.4 * 0.7), // height of bar chart is 0.8 of width
+    wrapperHeight: getDimensions(0.4 * 0.5),
   });
 
   // fetch clinvar summary
@@ -81,19 +84,22 @@ function App() {
     const fetchData = async () => {
       setTableLoading(true);
       const d = await d3.tsv("/data/allmatched_clean.tsv");
+      const filteredData = d.filter((v) =>
+        selectedLevels.includes(v.ClinicalSignificance)
+      );
 
       if (selectedChrom) {
-        const matches = d.filter((v) => v.CHROM === selectedChrom);
+        const matches = filteredData.filter((v) => v.CHROM === selectedChrom);
         setMatchData(matches);
       } else {
-        setMatchData(d);
+        setMatchData(filteredData);
       }
 
       setTableLoading(false);
     };
 
     fetchData();
-  }, [selectedChrom]);
+  }, [selectedChrom, selectedLevels]);
 
   // listen for resize events
   useEffect(() => {
@@ -114,11 +120,38 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const sortClinicalSignificance = useMemo(
+    () => (rowA, rowB, columnId, desc) => {
+      if (
+        indexOf(pathLevels, rowA.original[columnId]) >
+        indexOf(pathLevels, rowB.original[columnId])
+      ) {
+        return 1;
+      }
+      return -1;
+    },
+    []
+  );
+
+  const sortChromosome = useMemo(
+    () => (rowA, rowB, columnId, desc) => {
+      if (
+        indexOf(chromosomes, rowA.original[columnId]) >
+        indexOf(chromosomes, rowB.original[columnId])
+      ) {
+        return 1;
+      }
+      return -1;
+    },
+    []
+  );
+
   const columns = useMemo(
     () => [
       {
         Header: "Chr",
         accessor: "CHROM",
+        sortType: sortChromosome,
       },
       {
         Header: "Position",
@@ -131,6 +164,7 @@ function App() {
       {
         Header: "Clinical Significance",
         accessor: "ClinicalSignificance",
+        sortType: sortClinicalSignificance,
       },
       {
         Header: "Similarity",
@@ -139,14 +173,17 @@ function App() {
       {
         Header: "Allele ID",
         accessor: "AlleleID",
+        disableSortBy: true,
       },
       {
         Header: "Associated Phenotypes",
         accessor: "PhenotypeList",
+        disableSortBy: true,
       },
       {
         Header: "Gene",
         accessor: "HGNC_ID",
+        disableSortBy: true,
       },
     ],
     []
@@ -154,6 +191,24 @@ function App() {
 
   const handleSelectedChromChange = (e) => {
     setSelectedChrom(e.value);
+  };
+
+  const checkLevelSelected = (level) => {
+    return selectedLevels.includes(level);
+  };
+
+  const toggleLevelSelected = (e, level) => {
+    const selected = selectedLevels.includes(level);
+    if (selected) {
+      const newLevels = selectedLevels.filter((l) => l !== level);
+      setSelectedLevels(newLevels);
+    } else {
+      const newLevels = selectedLevels.concat(level);
+
+      // maintain constant order of pathogenicity levels
+      const orderedLevels = sortBy(newLevels, (o) => indexOf(pathLevels, o));
+      setSelectedLevels(orderedLevels);
+    }
   };
 
   return (
@@ -164,49 +219,70 @@ function App() {
         <GenomePlots
           width={circosWidth}
           selectedChrom={selectedChrom}
+          selectedLevels={selectedLevels}
           pathLevels={pathLevels}
           colourMap={colourMap}
         />
-        <div className="side">
+        <section className="side">
+          <Legend colourMap={colourMap} />
           <div className="sidebar-margin-left">
-            <h3 className="legend-title">Select Chromosome</h3>
+            <div className="select-levels">
+              <h3>Select Pathogenicity</h3>
+              {pathLevels.map((l) => (
+                <label key={l}>
+                  <input
+                    type="checkbox"
+                    checked={checkLevelSelected(l)}
+                    onChange={(e) => toggleLevelSelected(e, l)}
+                  />
+                  {l}
+                </label>
+              ))}
+            </div>
+            <h3>Navigate to Chromosome</h3>
             <Select
               options={chromOptions}
               defaultValue={{ value: null, label: "All" }}
               onChange={handleSelectedChromChange}
             />
           </div>
-          <Legend colourMap={colourMap} />
           {clinvarSummary.length > 0 && (
             <BarChart
               data={clinvarSummary}
               chromosomes={chromosomes}
-              pathLevels={pathLevels}
+              pathLevels={selectedLevels}
               colourMap={colourMap}
               title="ClinVar Variants"
               wrapperWidth={barChartDims.wrapperWidth}
               wrapperHeight={barChartDims.wrapperHeight}
               leftOffset={50}
+              selectedChrom={selectedChrom}
             />
           )}
           {matchSummary.length > 0 && (
             <BarChart
               data={matchSummary}
               chromosomes={chromosomes}
-              pathLevels={pathLevels}
+              pathLevels={selectedLevels}
               colourMap={colourMap}
               title="HG002 Matches"
               wrapperWidth={barChartDims.wrapperWidth}
               wrapperHeight={barChartDims.wrapperHeight}
               leftOffset={50}
+              selectedChrom={selectedChrom}
             />
           )}
-        </div>
+        </section>
       </main>
       {tableLoading ? (
         <p className="text-center">Loading matches...</p>
       ) : (
-        <MatchTable columns={columns} data={matchData} colourMap={colourMap} />
+        <MatchTable
+          columns={columns}
+          data={matchData}
+          colourMap={colourMap}
+          pathLevels={pathLevels}
+        />
       )}
     </>
   );

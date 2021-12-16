@@ -1,5 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
+import { sum } from "lodash";
 import BarChartXAxis from "./BarChartXAxis";
 import BarChartYAxis from "./BarChartYAxis";
 
@@ -12,6 +13,7 @@ const BarChart = ({
   pathLevels,
   colourMap,
   leftOffset,
+  selectedChrom,
 }) => {
   // sizing
   const margin = {
@@ -24,12 +26,8 @@ const BarChart = ({
   const boundsHeight = wrapperHeight - margin.top - margin.bottom;
 
   // get total # variants per chromosome
-  const chromosomeTotals = data.map(
-    (d) =>
-      parseInt(d.Benign) +
-      parseInt(d["Uncertain significance"]) +
-      parseInt(d.Pathogenic) +
-      parseInt(d["Likely pathogenic"])
+  const chromosomeTotals = data.map((d) =>
+    sum(pathLevels.map((l) => parseInt(d[l])))
   );
 
   // stack data
@@ -40,7 +38,7 @@ const BarChart = ({
     .scaleBand()
     .domain(chromosomes)
     .range([margin.left, boundsWidth + margin.left])
-    .padding([0.1]);
+    .padding([0.15]);
   const yScale = d3
     .scaleLinear()
     .domain([0, Math.max(...chromosomeTotals)])
@@ -70,6 +68,35 @@ const BarChart = ({
       {/* bars */}
       {stack.map((s, i) =>
         s.map((d) => {
+          // place border around selected chromosome
+          let strokeDashArray;
+          if (d.data.Chromosome !== selectedChrom) {
+            strokeDashArray = null;
+          } else {
+            const presentPathLevels = pathLevels
+              .map((l) => d.data[l])
+              .filter((d) => d !== "0");
+            if (i === presentPathLevels.length - 1) {
+              // border on top and sides
+              strokeDashArray = [
+                xScale.bandwidth() + 2,
+                0,
+                yScale(d[0]) - yScale(d[1]) - 2,
+                xScale.bandwidth(),
+                yScale(d[0]) - yScale(d[1]) + 2,
+                0,
+              ];
+            } else {
+              // border on sides
+              strokeDashArray = [
+                0,
+                xScale.bandwidth(),
+                yScale(d[0]) - yScale(d[1]),
+                0,
+              ];
+            }
+          }
+
           return (
             <rect
               key={`${d.data.Chromosome} ${d.data.ClinicalSignificance}`}
@@ -78,6 +105,9 @@ const BarChart = ({
               y={yScale(d[1])}
               height={yScale(d[0]) - yScale(d[1])}
               fill={colourScale(pathLevels[i])}
+              stroke={d.data.Chromosome === selectedChrom ? "black" : null}
+              strokeWidth="2px"
+              strokeDasharray={strokeDashArray}
             />
           );
         })

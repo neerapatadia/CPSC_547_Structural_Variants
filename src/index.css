@@ -6,6 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -47,18 +51,26 @@ text {
   transform: translate(42px, 4px);
 }
 
+/* select checkboxes */
+.select-levels {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-levels label {
+  display: flex;
+}
+
+.select-levels label input {
+  margin-right: 0.5em;
+}
+
 /* legend styles */
 
 .legend-colours {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.legend-title {
-  margin-top: 1em;
-  font-size: 1.5rem;
-  font-weight: 600;
 }
 
 .legend-element {

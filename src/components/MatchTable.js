@@ -1,5 +1,6 @@
 import React from "react";
-import { useTable, usePagination } from "react-table";
+import { indexOf } from "lodash";
+import { useTable, usePagination, useSortBy } from "react-table";
 import ClinicalSignificance from "./ClinicalSignificance";
 import Select from "react-select";
 import Similarity from "./Similarity";
@@ -9,7 +10,7 @@ const pageSelectOptions = [10, 20, 30].map((c) => ({
   label: `Show ${c}`,
 }));
 
-const MatchTable = ({ columns, data, colourMap }) => {
+const MatchTable = ({ columns, data, colourMap, pathLevels }) => {
   const {
     getTableProps,
     getTableBodyProps,
@@ -24,13 +25,15 @@ const MatchTable = ({ columns, data, colourMap }) => {
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex, pageSize },
+    state: { pageIndex },
   } = useTable(
     {
       columns,
       data,
+      disableMultiSort: false,
       initialState: { pageIndex: 0 },
     },
+    useSortBy,
     usePagination
   );
 
@@ -42,7 +45,16 @@ const MatchTable = ({ columns, data, colourMap }) => {
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  {column.render("Header")}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? " 🔽"
+                        : " 🔼"
+                      : ""}
+                  </span>
+                </th>
               ))}
             </tr>
           ))}
@@ -56,12 +68,13 @@ const MatchTable = ({ columns, data, colourMap }) => {
                   if (cell.column.id === "ClinicalSignificance")
                     return (
                       <ClinicalSignificance
+                        key={cell.value}
                         value={cell.value}
                         colourMap={colourMap}
                       />
                     );
                   if (cell.column.id === "Similarity") {
-                    return <Similarity value={cell.value} />;
+                    return <Similarity key={cell.value} value={cell.value} />;
                   }
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
