@@ -53,7 +53,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                 //Events
                 {
                   data: {
-                    url: "https://raw.githubusercontent.com/neerapatadia/CPSC_547_Structural_Variants/main/data/allmatched_clean.tsv?token=ANMJ5YX7E2GENYCI23N5S73BYKYF2",
+                    url: "/data/allmatched_clean.tsv",
                     type: "csv",
                     separator: "\t",
                     chromosomeField: "CHROM",
@@ -62,8 +62,8 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                   dataTransform: [
                     {
                       type: "filter",
-                      field: "Type",
-                      oneOf: ["Insertion", "Deletion", "Translocation"],
+                      field: "SVTYPE",
+                      // oneOf: ["Insertion", "Deletion", "Translocation"],
                     },
                   ],
                   mark: "rect",
@@ -134,7 +134,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
               data: {
                 type: "csv",
                 separator: "\t",
-                url: "https://raw.githubusercontent.com/neerapatadia/CPSC_547_Structural_Variants/main/data/allmatched_clean.tsv?token=ANMJ5YX7E2GENYCI23N5S73BYKYF2",
+                url: "/data/allmatched_clean.tsv",
                 chromosomeField: "CHROM",
                 genomicFields: ["POS", "END"],
               },
@@ -167,7 +167,7 @@ const GenomePlots = ({ width, selectedChrom, pathLevels, colourMap }) => {
                 { field: "POS", type: "genomic", alt: "Start Position" },
                 { field: "END", type: "genomic", alt: "End Position" },
                 {
-                  field: "Type",
+                  field: "SVTYPE",
                   type: "nominal",
                   alt: "SV Type",
                 },

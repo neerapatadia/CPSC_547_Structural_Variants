@@ -15,8 +15,6 @@ import "./App.css";
 // bar charts / hover details = 40% width of main
 // see App.css
 
-// TODO: try layout with one track for all SVs, one track for matches
-
 const chromosomes = range(1, 23)
   .map((c) => `${c}`)
   .concat(["X", "Y"]);
@@ -128,7 +126,7 @@ function App() {
       },
       {
         Header: "Type",
-        accessor: "Type",
+        accessor: "SVTYPE",
       },
       {
         Header: "Clinical Significance",
@@ -208,7 +206,7 @@ function App() {
       {tableLoading ? (
         <p className="text-center">Loading matches...</p>
       ) : (
-        <MatchTable columns={columns} data={matchData} />
+        <MatchTable columns={columns} data={matchData} colourMap={colourMap} />
       )}
     </>
   );

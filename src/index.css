@@ -160,11 +160,21 @@ text {
 }
 
 .match-table th:nth-child(4) {
-  width: 20%;
-  min-width: 10em;
+  width: 15%;
+  min-width: 7.5em;
 }
 
 .match-table th:nth-child(7) {
-  width: 25%;
+  width: 30%;
   min-width: 12.5em;
+}
+
+.clinical-significance {
+  padding: 0 0.5em;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+.similarity {
+  border-radius: 3px;
 }

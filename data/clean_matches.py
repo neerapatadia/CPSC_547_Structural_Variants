@@ -26,9 +26,13 @@ def get_phenotypes(pheno_string):
     return "-"
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print(f"Usage: {sys.argv[0]} <matches>")
+        sys.exit(1)
+    
     matches = sys.argv[1]
 
-    keep_cols = ["CHROM", "POS", "END", "Type", "ClinicalSignificance", "Similarity",
+    keep_cols = ["CHROM", "POS", "END", "SVTYPE", "ClinicalSignificance", "Similarity",
                  "AlleleID", "PhenotypeList", "HGNC_ID"]
     chromosomes = [str(i) for i in list(range(1, 23))]
     chromosomes.extend(["X", "Y"])
