@@ -18,7 +18,7 @@ const BarChart = ({
   // sizing
   const margin = {
     top: 25,
-    right: 5,
+    right: 0,
     bottom: 35,
     left: leftOffset,
   };

@@ -7,15 +7,12 @@ import Legend from "./components/Legend";
 import MatchTable from "./components/MatchTable";
 import Select from "react-select";
 import { getDimensions } from "./utils/getDimensions";
-import "./App.css";
 
 // dimensions:
 // main container = 90% width
 // circos / linear track = 60% width of main
 // bar charts / hover details = 40% width of main
-// see App.css
-
-// TODO: allow sorting table
+// see index.css
 
 const chromosomes = range(1, 23)
   .map((c) => `${c}`)

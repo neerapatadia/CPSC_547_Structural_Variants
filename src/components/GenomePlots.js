@@ -37,9 +37,9 @@ const GenomePlots = ({
                 range: ["#BDBDBD", "#636363"],
               },
               x: { field: "POS", type: "genomic" },
-              // xe: { field: "END", type: "genomic" },
-              stroke: { value: colourMap["No match"] },
-              strokeWidth: { value: 0.1 },
+              //xe: { field: "END", type: "genomic" },
+              stroke: { value: colourMap["All variants"] },
+              strokeWidth: { value: 1 },
               width,
               height: 10,
               tracks: [
@@ -80,9 +80,14 @@ const GenomePlots = ({
                     range: pathLevels.map((l) => colourMap[l]),
                   },
                   x: { field: "POS", type: "genomic" },
-                  // xe: { field: "END", type: "genomic" },
-                  stroke: { value: "lightgray" },
-                  strokeWidth: { value: 0.1 },
+                  //xe: { field: "END", type: "genomic" },
+                  stroke: {
+                    field: "ClinicalSignificance",
+                    type: "nominal",
+                    domain: pathLevels,
+                    range: pathLevels.map((l) => colourMap[l]),
+                  },
+                  strokeWidth: { value: 1 },
                   tracks: [
                     { mark: "rect" },
                     {

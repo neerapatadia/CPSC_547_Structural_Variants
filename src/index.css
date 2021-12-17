@@ -14,6 +14,27 @@ h3 {
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+}
+
+.dashboard {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.side {
+  width: 40%;
+  margin-left: 2em;
+}
+
 .side > * {
   margin-bottom: 1.5em;
 }
